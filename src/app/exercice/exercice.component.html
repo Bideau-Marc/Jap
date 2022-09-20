@@ -1,0 +1,35 @@
+<div *ngIf="this.premierExo">
+    <div class="left">
+        <span *ngIf="this.un">{{score}}</span><span>/{{nbessaies}}</span>
+    </div>
+    <div class="centrerSansFlex" *ngIf="this.standard">
+        <h1>traduisez l'expresion suivante : {{expression}} </h1>
+        <input class="padding" type="text"  id="ans">
+        <br>
+        <p *ngIf="this.correct">{{ answer }}</p>
+        <button (click)="verifier()">Vérifier la réponse</button>
+        <button *ngIf='this.firstTry' (click)="afficher()">afficher la réponse</button>
+        <button *ngIf='this.correct' (click)="next()">afficher la réponse</button>
+
+        
+    </div>
+</div>
+<div *ngIf='this.secondExo'>
+    <div class="centrer">
+        <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+            <div class="example-box" *ngFor="let movie of this.listeFr" cdkDrag>
+                {{movie}}
+            </div>
+        </div>
+        <div cdkDropList class="example-list" (cdkDropListDropped)="dropListe2($event)">
+
+            <div class="example-box" *ngFor="let movie of this.listeJap" cdkDrag>
+                {{movie}}
+            </div>
+        </div>
+    </div>
+    <div class="centrer">
+        <button class="centrerSansFlex"(click)="verifier()">Verifier les réponses</button>
+
+    </div>
+</div>
