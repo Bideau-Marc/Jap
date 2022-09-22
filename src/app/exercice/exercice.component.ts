@@ -1,6 +1,10 @@
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 import { ParseTreeResult } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+import  * as formules from '../listes/formules_de_politesse.json';
+import  * as katakana from '../listes/katakana.json';
+import  * as hiragana from '../listes/hiragana.json';
+
 
 @Component({
   selector: 'app-exercice',
@@ -13,7 +17,7 @@ export class ExerciceComponent implements OnInit {
   drag:boolean = false;
   firstTry:boolean =false;
   correct:boolean=false;
-  liste:{"fr":any,"ans":any}[]= [];
+  liste:{"question":any,"ans":any}[]= [];
   answer:string="";
   score:number=0;
   nbessaies:number = 1;
@@ -21,66 +25,33 @@ export class ExerciceComponent implements OnInit {
   un:boolean=false;
   premierExo:boolean= false;
   secondExo:boolean=true;
-  listeFr: string[]=[];
+  listequestion: string[]=[];
   listeJap: string[]=[]
+  listeDeVerif:{"question":any,"ans":any,"juste":any}[]= [];
+  verified: boolean = false;
+ 
   constructor() { }
 
   ngOnInit(): void {
     let nbListe:number
     let nbdanslaliste:number;
-    console.log(localStorage.getItem("exo"))
+    console.log(formules, "here", JSON.parse(JSON.stringify(formules)).length)
     switch(localStorage.getItem('exo')){
       case "formules":
-        this.liste  = [
-        {"fr": "oui", "ans": "はい"},
-        {"fr": "non", "ans": "いいえ"},
-        {"fr": "svp", "ans": "おねがいします"},
-        {"fr": "merci", "ans": "ありがとう"},
-        {"fr": "merci poli", "ans": "ありがとうございます"},
-        {"fr": "merci beaucoup", "ans": "ありがとうございます"},
-        {"fr": "de rien", "ans": "どういたしまして"},
-        {"fr": "bonjour", "ans": "こんにちは"},
-        {"fr": "bonjour du matin (poli)", "ans": "おはよう(ございます)"},
-        {"fr": "bonsoir", "ans": "こんばんは"},
-        {"fr": "comment ça va", "ans": "おｹﾞﾝｷですか"},
-        {"fr": "ça va", "ans": "はい，げんきです"},
-        {"fr": "au revoir", "ans": "またん"},
-        {"fr": "au revoir (adieu)", "ans": "さよなら"},
-        {"fr": "bonne nuit", "ans": "おやすみ"},
-        {"fr": "a demain", "ans": "またあした"},
-        {"fr": "enchanté", "ans": "はじめまして"},
-        {"fr": "je vous en prie (entrez)", "ans": "どおぞ"},
-        {"fr": "bon app", "ans": "いただきます"},
-        {"fr": "désolé", "ans": "ごめん"},
-        {"fr": "excusez-moi", "ans": "すみません"},
-        {"fr": "bon travail", "ans": "おつかねさまでした"},
-        {"fr": "j'y vais", "ans": "いってきます"},
-        {"fr": "bonne journée", "ans": "いってらっしゃい"},
-        {"fr": "je suis rentré", "ans": "ただいま"},
-        {"fr": "bon retour(poli)", "ans": "おかえり(なさい)"},
-        {"fr": "bienvenu (magasin)", "ans": "いらっしゃいませ"},
-        {"fr": "bienvenu", "ans": "ようこそ"},
-        {"fr": "je rentre (chez quelqu'un)", "ans": "おｼﾞｬﾏします"}
-        ]
-        nbListe = Math.floor(Math.random() * this.liste.length)
-        nbdanslaliste = Math.floor(Math.random() * 2)
-        console.log(nbListe, "nblsites",nbdanslaliste,"nbdanslaliste");
-        if(nbdanslaliste == 0){
-          this.expression = this.liste[nbListe].fr;
-          this.answer = this.liste[nbListe].ans
+        for(let i = 0; i<JSON.parse(JSON.stringify(formules)).length; i++){
+          this.liste.push(JSON.parse(JSON.stringify(formules))[i]);
         }
-        else{
-          this.expression = this.liste[nbListe].ans;
-          this.answer = this.liste[nbListe].fr;
-
-        }
-        console.log(this.expression)
+        
         break;
       case "katakana":
-
+        for(let i = 0; i<JSON.parse(JSON.stringify(katakana)).length; i++){
+          this.liste.push(JSON.parse(JSON.stringify(katakana))[i]);
+        }
         break;
       case "hiragana":
-
+        for(let i = 0; i<JSON.parse(JSON.stringify(hiragana)).length; i++){
+          this.liste.push(JSON.parse(JSON.stringify(hiragana))[i]);
+        }
         break;
       case "premier kanji":
 
@@ -100,12 +71,25 @@ export class ExerciceComponent implements OnInit {
     // else{
     //   this.drag = true;
     // }
-    
-    this.liste.slice(0,8).forEach(element=>{
-      this.listeFr.push(element.fr);
+    nbListe = Math.floor(Math.random() * this.liste.length)
+    nbdanslaliste = Math.floor(Math.random() * 2)
+    console.log(nbListe, "nblsites",nbdanslaliste,"nbdanslaliste");
+    if(nbdanslaliste == 0){
+      this.expression = this.liste[nbListe].question;
+      this.answer = this.liste[nbListe].ans
+    }
+    else{
+      this.expression = this.liste[nbListe].ans;
+      this.answer = this.liste[nbListe].question;
+
+    }
+    console.log("aqui", this.liste, typeof this.listeDeVerif.slice(0,2) )
+     let int = Math.floor(Math.random() * this.liste.length-8);
+     this.liste.slice(int,int+8).forEach(element=>{
+      this.listequestion.push(element.question);
       this.listeJap.push(element.ans);
     })
-    console.log("listeFr", this.listeFr, this.shuffleArray(this.listeFr))
+    console.log("listequestion", this.listequestion, this.shuffleArray(this.listequestion),)
   }
 verifier(){
   switch(true){
@@ -129,12 +113,20 @@ verifier(){
       break;
     case this.secondExo:
       console.log('verif');
-      let listeVerif:{"fr":any,"ans":any}[]= [];
-
-      for(let i = 0; i<this.listeFr.length;i++){
-        listeVerif.push({"fr":this.listeFr[i],"ans":this.listeJap[i]})
+      let listeVerif:{"question":any,"ans":any}[]= [];
+      for(let i = 0; i<this.listequestion.length;i++){
+        listeVerif.push({"question":this.listequestion[i],"ans":this.listeJap[i]})
       }
-      if(this.liste.includes(listeVerif))
+      listeVerif.forEach(element=>{
+         if(this.liste.filter(a=> a.question ==element.question && a.ans ==element.ans).length!=0){
+          this.listeDeVerif.push({"question":element.question,"ans":element.ans,"juste":"juste"})
+         }
+         else
+           this.listeDeVerif.push({"question":element.question,"ans":element.ans,"juste":"faux"})
+      });
+      console.log(this.listeDeVerif,"listeDeVerif")
+      this.verified = true;
+      this.correct = true;
   }
  
 }
@@ -150,12 +142,12 @@ next(){
   nbdanslaliste = Math.floor(Math.random() * 2)
   console.log(nbListe, "nblsites",nbdanslaliste,"nbdanslaliste");
   if(nbdanslaliste == 0){
-    this.expression = this.liste[nbListe].fr;
+    this.expression = this.liste[nbListe].question;
     this.answer = this.liste[nbListe].ans
   }
   else{
     this.expression = this.liste[nbListe].ans;
-    this.answer = this.liste[nbListe].fr;
+    this.answer = this.liste[nbListe].question;
 
   }
   this.correct = false;
@@ -164,7 +156,7 @@ next(){
   this.nbessaies++;
 }
 drop(event: CdkDragDrop<string[]>) {
-  moveItemInArray(this.listeFr, event.previousIndex, event.currentIndex);
+  moveItemInArray(this.listequestion, event.previousIndex, event.currentIndex);
 }
 dropListe2(event: CdkDragDrop<string[]>) {
   moveItemInArray(this.listeJap, event.previousIndex, event.currentIndex);
