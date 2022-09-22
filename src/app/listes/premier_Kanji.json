@@ -1,0 +1,22 @@
+[
+    {"question":"Une personne","ans":"人"},
+    {"question":"Homme","ans":"男"},
+    {"question":"Femme","ans":"女"},
+    {"question":"Enfant","ans":"子"},
+    {"question":"Soleil","ans":"日"},
+    {"question":"la lune","ans":"月"},
+    {"question":"le temps","ans":"時"},
+    {"question":"l'eau","ans":"水"},
+    {"question":"le feu","ans":"火"},
+    {"question":"la terre ","ans":"土"},
+    {"question":"le vent","ans":"風"},
+    {"question":"le ciel","ans":"空"},
+    {"question":"la montagne","ans":"山"},
+    {"question":"la rivière","ans":"川"},
+    {"question":"l'arbre","ans":"木"},
+    {"question":"la fleur","ans":"花"},
+    {"question":"la pluie","ans":"雨"},
+    {"question":"la neige","ans":"雪"},
+    {"question":"l'argent","ans":"金"},
+    {"question":"le sabre","ans":"刀"}   
+]
