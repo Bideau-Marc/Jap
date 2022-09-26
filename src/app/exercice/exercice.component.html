@@ -1,20 +1,21 @@
-<div *ngIf="this.premierExo">
-    <div class="left">
-        <span *ngIf="this.un">{{score}}</span><span>/{{nbessaies}}</span>
-    </div>
+<div class="left">
+    <span>{{score}}</span><span>/{{nbessaies}}</span>
+</div>
+<div *ngIf="this.TypeExo[0]">
     <div class="centrerSansFlex" *ngIf="this.standard">
         <h1>traduisez l'expresion suivante : {{expression}} </h1>
         <input class="padding" type="text"  id="ans">
         <br>
-        <p *ngIf="this.correct">{{ answer }}</p>
-        <button (click)="verifier()">Vérifier la réponse</button>
+        <p *ngIf="this.aficher">Dommage La réponse était: {{ answer }}</p>
+        <p *ngIf="this.correct">Félicitation La réponse est bien : {{ answer }}</p>
+        <button (click)="verifier()"  *ngIf='!(this.correct||this.aficher)'>Vérifier la réponse</button>
         <button *ngIf='this.firstTry' (click)="afficher()">afficher la réponse</button>
-        <button *ngIf='this.correct' (click)="next()">afficher la réponse</button>
+        <button *ngIf='this.correct||this.aficher' (click)="next()">passer à une question suivant</button>
 
         
     </div>
 </div>
-<div *ngIf='this.secondExo'>
+<div *ngIf='this.TypeExo[1]'>
     <div class="centrer">
         <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
             <div class="example-box" *ngFor="let movie of this.listequestion" cdkDrag>
@@ -37,7 +38,7 @@
     
     <div class="centrer">
         <button *ngIf="!this.correct" class="centrerSansFlex"(click)="verifier()">Verifier les réponses</button>
-        <button *ngIf='this.correct' (click)="next()">afficher la réponse</button>
+        <button *ngIf='this.correct' (click)="next()">passer a la série suivante</button>
 
     </div>
 </div>

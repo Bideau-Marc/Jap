@@ -4,8 +4,9 @@ import { Component, OnInit } from '@angular/core';
 import  * as formules from '../listes/formules_de_politesse.json';
 import  * as katakana from '../listes/katakana.json';
 import  * as hiragana from '../listes/hiragana.json';
-
-
+import  * as premierKanji from '../listes/premier_Kanji.json';
+import * as mobilier from '../listes/materiel_domestique.json';
+import { elementAt } from 'rxjs';
 @Component({
   selector: 'app-exercice',
   templateUrl: './exercice.component.html',
@@ -20,11 +21,13 @@ export class ExerciceComponent implements OnInit {
   liste:{"question":any,"ans":any}[]= [];
   answer:string="";
   score:number=0;
-  nbessaies:number = 1;
+  nbessaies:number = 0;
   premier:boolean=false;
+  aficher:boolean= false;
   un:boolean=false;
-  premierExo:boolean= false;
-  secondExo:boolean=true;
+  premierExo:boolean = false;
+  secondExo:boolean = true;
+  TypeExo:boolean[]=[false,false];
   listequestion: string[]=[];
   listeJap: string[]=[]
   listeDeVerif:{"question":any,"ans":any,"juste":any}[]= [];
@@ -33,86 +36,56 @@ export class ExerciceComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    let nbListe:number
-    let nbdanslaliste:number;
-    console.log(formules, "here", JSON.parse(JSON.stringify(formules)).length)
+    this.getTypeExo();
+   
     switch(localStorage.getItem('exo')){
       case "formules":
-        for(let i = 0; i<JSON.parse(JSON.stringify(formules)).length; i++){
-          this.liste.push(JSON.parse(JSON.stringify(formules))[i]);
-        }
+        console
+       this.setListe(formules);
         
         break;
       case "katakana":
-        for(let i = 0; i<JSON.parse(JSON.stringify(katakana)).length; i++){
-          this.liste.push(JSON.parse(JSON.stringify(katakana))[i]);
-        }
+        this.setListe(katakana);
         break;
       case "hiragana":
-        for(let i = 0; i<JSON.parse(JSON.stringify(hiragana)).length; i++){
-          this.liste.push(JSON.parse(JSON.stringify(hiragana))[i]);
-        }
+        this.setListe(hiragana);
         break;
       case "premier kanji":
-
+        this.setListe(premierKanji);
         break;
       case "mobilier":
-
+        this.setListe(mobilier);
         break;
       default:
         break;
             
     }
-    // let i:number = Math.random();
-    // console.log(i,"i")
-    // if(i<0.5){
-    //   this.standard=true;
-    // }
-    // else{
-    //   this.drag = true;
-    // }
-    nbListe = Math.floor(Math.random() * this.liste.length)
-    nbdanslaliste = Math.floor(Math.random() * 2)
-    console.log(nbListe, "nblsites",nbdanslaliste,"nbdanslaliste");
-    if(nbdanslaliste == 0){
-      this.expression = this.liste[nbListe].question;
-      this.answer = this.liste[nbListe].ans
-    }
-    else{
-      this.expression = this.liste[nbListe].ans;
-      this.answer = this.liste[nbListe].question;
-
-    }
-    console.log("aqui", this.liste, typeof this.listeDeVerif.slice(0,2) )
-     let int = Math.floor(Math.random() * this.liste.length-8);
-     this.liste.slice(int,int+8).forEach(element=>{
-      this.listequestion.push(element.question);
-      this.listeJap.push(element.ans);
-    })
-    console.log("listequestion", this.listequestion, this.shuffleArray(this.listequestion),)
+    this.shuffleArray(this.liste)
+    this.getQuestion();
+    
+    this.setListeFRetJap();
+    this.shuffleArray(this.listeJap)
+    this.shuffleArray(this.listequestion)
   }
 verifier(){
+  console.log(this.TypeExo, "ans") //(<HTMLInputElement>document.getElementById('ans')).value)
   switch(true){
-    case this.premierExo:
+    case this.TypeExo[0]:
       let ans = (<HTMLInputElement>document.getElementById('ans')).value
       this.answer = this.answer.toUpperCase()
-      console.log(ans, "ans", this.answer, this.answer.includes(ans.toUpperCase()), this.answer.toLocaleUpperCase())
-      if(this.answer.includes(ans.toUpperCase())){
-        console.log('bien ouej')
-        this.firstTry = true;
+      if(this.answer.includes(ans.toUpperCase()) && this.answer !=""){
         this.correct= true;
+        ans = ""
         if(!this.premier){
           this.score++;
         }
       }
       else{
-        console.log('mal ouej')
         this.firstTry = true;
         this.premier = true;
       }
       break;
-    case this.secondExo:
-      console.log('verif');
+    case this.TypeExo[1]:
       let listeVerif:{"question":any,"ans":any}[]= [];
       for(let i = 0; i<this.listequestion.length;i++){
         listeVerif.push({"question":this.listequestion[i],"ans":this.listeJap[i]})
@@ -124,36 +97,43 @@ verifier(){
          else
            this.listeDeVerif.push({"question":element.question,"ans":element.ans,"juste":"faux"})
       });
-      console.log(this.listeDeVerif,"listeDeVerif")
       this.verified = true;
-      this.correct = true;
+      this.correct = true; 
+      this.listeDeVerif.forEach(element=>{
+        if(element.juste==="juste"){
+          this.score++;
+        }
+        this.nbessaies++;
+      });
+      break;
+    default:
+      break;
+
   }
  
 }
 afficher(){
-  this.correct = true;
+  this.aficher = true;
+  this.firstTry = false;
 }
 next(){
-  this.un = true;
-  (<HTMLInputElement>document.getElementById('ans')).value = ""
-  let nbListe:number
-  let nbdanslaliste:number;
-  nbListe = Math.floor(Math.random() * this.liste.length)
-  nbdanslaliste = Math.floor(Math.random() * 2)
-  console.log(nbListe, "nblsites",nbdanslaliste,"nbdanslaliste");
-  if(nbdanslaliste == 0){
-    this.expression = this.liste[nbListe].question;
-    this.answer = this.liste[nbListe].ans
-  }
-  else{
-    this.expression = this.liste[nbListe].ans;
-    this.answer = this.liste[nbListe].question;
+  this.TypeExo = [false,false]
 
-  }
+  this.getTypeExo();
+  this.shuffleArray(this.liste)
+  this.getQuestion();
+  this.listeJap=[]
+  this.listequestion = []
+  this.listeDeVerif = []
+  this.setListeFRetJap();
+  this.shuffleArray(this.listeJap)
+  this.shuffleArray(this.listequestion)
   this.correct = false;
   this.firstTry = false;  
   this.premier=false;
   this.nbessaies++;
+  this.aficher = false;
+  this.verified = false;
 }
 drop(event: CdkDragDrop<string[]>) {
   moveItemInArray(this.listequestion, event.previousIndex, event.currentIndex);
@@ -161,7 +141,7 @@ drop(event: CdkDragDrop<string[]>) {
 dropListe2(event: CdkDragDrop<string[]>) {
   moveItemInArray(this.listeJap, event.previousIndex, event.currentIndex);
 }
- shuffleArray(array:string[]) {
+ shuffleArray(array:any) {
   for (var i = array.length - 1; i > 0; i--) {
       var j = Math.floor(Math.random() * (i + 1));
       var temp = array[i];
@@ -169,5 +149,42 @@ dropListe2(event: CdkDragDrop<string[]>) {
       array[j] = temp;
   }
 }
+  setListe(file: { question: string; ans: string; }[]){
+    for(let i = 0; i<JSON.parse(JSON.stringify(file)).length; i++){
+      this.liste.push(JSON.parse(JSON.stringify(file))[i]);
+    }
+  }
+  getTypeExo(){
+    let nbexo = Math.floor(Math.random() * this.TypeExo.length);
+    for(let p = 0; p<this.TypeExo.length;p++){
+      if(p == nbexo){
+        this.TypeExo[p]=true;
+      }
+    }
+    console.log(this.TypeExo)
+  }
+  getQuestion(){
+    let nbListe:number
+    let nbdanslaliste:number;
+    nbListe = Math.floor(Math.random() * this.liste.length)
+    nbdanslaliste = Math.floor(Math.random() * 2)
+    if(nbdanslaliste == 0){
+      this.expression = this.liste[nbListe].question;
+      this.answer = this.liste[nbListe].ans;
+    }
+    else{
+      this.expression = this.liste[nbListe].ans;
+      this.answer = this.liste[nbListe].question;
+
+    }
+  }
+  setListeFRetJap(){
+    let int = Math.floor(Math.random() * this.liste.length-8);
+    console.log(int, int+8)
+     this.liste.slice(int,int+8).forEach(element=>{
+      this.listequestion.push(element.question);
+      this.listeJap.push(element.ans);
+    })
+  }
 }
 
