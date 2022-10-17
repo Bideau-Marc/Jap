@@ -179,8 +179,8 @@ dropListe2(event: CdkDragDrop<string[]>) {
     }
   }
   setListeFRetJap(){
-    let int = Math.floor(Math.random() * this.liste.length-8);
-    console.log(int, int+8)
+    let int = Math.floor(Math.random() * (this.liste.length-8));
+    console.log(int, int+8, this.liste.length)
      this.liste.slice(int,int+8).forEach(element=>{
       this.listequestion.push(element.question);
       this.listeJap.push(element.ans);
