@@ -1,31 +1,147 @@
 [
-    {"question": "oui", "ans": "はい"},
-    {"question": "non", "ans": "いいえ"},
-    {"question": "svp", "ans": "おねがいします"},
-    {"question": "merci", "ans": "ありがとう"},
-    {"question": "merci poli", "ans": "ありがとうございます"},
-    {"question": "merci beaucoup", "ans": "ありがとうございます"},
-    {"question": "de rien", "ans": "どういたしまして"},
-    {"question": "bonjour", "ans": "こんにちは"},
-    {"question": "bonjour du matin (poli)", "ans": "おはよう(ございます)"},
-    {"question": "bonsoir", "ans": "こんばんは"},
-    {"question": "comment ça va", "ans": "おｹﾞﾝｷですか"},
-    {"question": "ça va", "ans": "はい，げんきです"},
-    {"question": "au revoir", "ans": "またん"},
-    {"question": "au revoir (adieu)", "ans": "さよなら"},
-    {"question": "bonne nuit", "ans": "おやすみ"},
-    {"question": "a demain", "ans": "またあした"},
-    {"question": "enchanté", "ans": "はじめまして"},
-    {"question": "je vous en prie (entrez)", "ans": "どおぞ"},
-    {"question": "bon app", "ans": "いただきます"},
-    {"question": "désolé", "ans": "ごめん"},
-    {"question": "excusez-moi", "ans": "すみません"},
-    {"question": "bon travail", "ans": "おつかねさまでした"},
-    {"question": "j'y vais", "ans": "いってきます"},
-    {"question": "bonne journée", "ans": "いってらっしゃい"},
-    {"question": "je suis rentré", "ans": "ただいま"},
-    {"question": "bon retour(poli)", "ans": "おかえり(なさい)"},
-    {"question": "bienvenu (magasin)", "ans": "いらっしゃいませ"},
-    {"question": "bienvenu", "ans": "ようこそ"},
-    {"question": "je rentre (chez quelqu'un)", "ans": "おｼﾞｬﾏします"}
-    ]
+    {
+        "francais": "oui",
+        "japonais": "はい",
+        "themeId":3
+    },
+    {
+        "francais": "non",
+        "japonais": "いいえ",
+        "themeId":3
+    },
+    {
+        "francais": "svp",
+        "japonais": "おねがいします",
+        "themeId":3
+    },
+    {
+        "francais": "merci",
+        "japonais": "ありがとう",
+        "themeId":3
+    },
+    {
+        "francais": "merci poli",
+        "japonais": "ありがとうございます",
+        "themeId":3
+    },
+    {
+        "francais": "merci beaucoup",
+        "japonais": "ありがとうございます",
+        "themeId":3
+    },
+    {
+        "francais": "de rien",
+        "japonais": "どういたしまして",
+        "themeId":3
+    },
+    {
+        "francais": "bonjour",
+        "japonais": "こんにちは",
+        "themeId":3
+    },
+    {
+        "francais": "bonjour du matin (poli)",
+        "japonais": "おはよう(ございます)",
+        "themeId":3
+    },
+    {
+        "francais": "bonsoir",
+        "japonais": "こんばんは",
+        "themeId":3
+    },
+    {
+        "francais": "comment ça va",
+        "japonais": "おｹﾞﾝｷですか",
+        "themeId":3
+    },
+    {
+        "francais": "ça va",
+        "japonais": "はい，げんきです",
+        "themeId":3
+    },
+    {
+        "francais": "au revoir",
+        "japonais": "またん",
+        "themeId":3
+    },
+    {
+        "francais": "au revoir (adieu)",
+        "japonais": "さよなら",
+        "themeId":3
+    },
+    {
+        "francais": "bonne nuit",
+        "japonais": "おやすみ",
+        "themeId":3
+    },
+    {
+        "francais": "a demain",
+        "japonais": "またあした",
+        "themeId":3
+    },
+    {
+        "francais": "enchanté",
+        "japonais": "はじめまして",
+        "themeId":3
+    },
+    {
+        "francais": "je vous en prie (entrez)",
+        "japonais": "どおぞ",
+        "themeId":3
+    },
+    {
+        "francais": "bon app",
+        "japonais": "いただきます",
+        "themeId":3
+    },
+    {
+        "francais": "désolé",
+        "japonais": "ごめん",
+        "themeId":3
+    },
+    {
+        "francais": "excusez-moi",
+        "japonais": "すみません",
+        "themeId":3
+    },
+    {
+        "francais": "bon travail",
+        "japonais": "おつかねさまでした",
+        "themeId":3
+    },
+    {
+        "francais": "j'y vais",
+        "japonais": "いってきます",
+        "themeId":3
+    },
+    {
+        "francais": "bonne journée",
+        "japonais": "いってらっしゃい",
+        "themeId":3
+    },
+    {
+        "francais": "je suis rentré",
+        "japonais": "ただいま",
+        "themeId":3
+    },
+    {
+        "francais": "bon retour(poli)",
+        "japonais": "おかえり(なさい)",
+        "themeId":3
+    },
+    {
+        "francais": "bienvenu (magasin)",
+        "japonais": "いらっしゃいませ",
+        "themeId":3
+    },
+    {
+        "francais": "bienvenu",
+        "japonais": "ようこそ",
+        "themeId":3
+    },
+    {
+        "francais": "je rentre (chez quelqu'un)",
+        "japonais": "おｼﾞｬﾏします",
+        "themeId":3
+    }
+]

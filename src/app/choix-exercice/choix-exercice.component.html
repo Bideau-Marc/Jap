@@ -1,13 +1,11 @@
 <h2 class="centrer">Séléctionner le sujet</h2>
 <div class="centrer">
-    <select id="selectExercice">
-        <option>formules de politesse</option>
-        <option>katakana</option>
-        <option>hiragana</option>
-        <option>premier kanji</option>
-        <option>mobilier</option>
+    <select [(ngModel)]="this.exo" >
+        <option *ngFor="let option of this.listeOption" [value]="option.id">{{option.thematique}}</option>
     </select>
 </div>
 <div class="centrer">
-    <button (click)="choixDeLexercice()">choisir l'exercice</button>
+    <button class='btn btn-primary'  (click)="choixDeLexercice()">choisir l'exercice</button>
 </div>
+
+

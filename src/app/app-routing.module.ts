@@ -19,7 +19,10 @@ const routes: Routes = [
   },
   {
     path:"choix-exercice", component:ChoixExerciceComponent
-  }
+  },
+  {
+    path:"test", component:TestComponent
+  },
 ];
 
 @NgModule({

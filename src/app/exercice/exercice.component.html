@@ -1,21 +1,46 @@
 <div class="left">
     <span>{{score}}</span><span>/{{nbessaies}}</span>
 </div>
-<div *ngIf="this.TypeExo[0]">
-    <div class="centrerSansFlex" *ngIf="this.standard">
+<div>
+    <div class="centrerSansFlex">
         <h1>traduisez l'expresion suivante : {{expression}} </h1>
-        <input class="padding" type="text"  id="ans">
-        <br>
-        <p *ngIf="this.aficher">Dommage La réponse était: {{ answer }}</p>
-        <p *ngIf="this.correct">Félicitation La réponse est bien : {{ answer }}</p>
-        <button (click)="verifier()"  *ngIf='!(this.correct||this.aficher)'>Vérifier la réponse</button>
-        <button *ngIf='this.firstTry' (click)="afficher()">afficher la réponse</button>
-        <button *ngIf='this.correct||this.aficher' (click)="next()">passer à une question suivant</button>
+        <div class="container">
+            <form class="needs-validation">
+                <div class="form-group row" *ngIf="this.answer.japonaisHira!=='' && this.answer.japonaisHira!=expression">
+                    <label class="col"> Hiragana </label>
+                    <input  class="col form-control" id="validationServer01" id='hira' required type="text" [(ngModel)]="this.answerUser.japonaisHira" name="this.answer.japonaisHira" (keydown.enter)="verifier()">
+                </div>
+                <div  class="form-group row" *ngIf="this.answer.japonaisKata!=='' && this.answer.japonaisKata!=expression">
+
+                    <label class="col"> Katakana </label>
+                    <input  class="col form-control" type="text" id='kata' [(ngModel)]="answerUser.japonaisKata"(keydown.enter)="verifier()" name="answerUser.japonaisKata">
+                </div>
+                <div class="form-group row" *ngIf="this.answer.kanji!=='' && this.answer.kanji!=expression">
+
+                    <label class="col"> Kanji </label>
+                    <input  class="col form-control" type="text" id='kan' [(ngModel)]="answerUser.kanji"(keydown.enter)="verifier()" name="answerUser.kanji">
+                </div>
+                <div class="form-group row" *ngIf="this.answer.francais!==''&& this.answer.francais!=expression">
+
+                    <label class="col"> Français </label>
+                    <input  class="col form-control" type="text" id='fra' [(ngModel)]="answerUser.francais"(keydown.enter)="verifier()" name="answerUser.francais">
+                </div>
+                <br>
+
+                <p *ngIf="this.afficher">Dommage La réponse était: en hiragana : {{ answer.japonaisHira }}, en katakana :{{answer.japonaisKata}}, en kanji : {{answer.kanji}}, en francais : {{answer.francais}} </p>
+                <p *ngIf="this.correct">Félicitation La réponse est bien : en hiragana : {{ answer.japonaisHira }}, en katakana :{{answer.japonaisKata}}, en kanji : {{answer.kanji}}, en francais : {{answer.francais}}</p>
+                <button type="submit" class='btn btn-primary' (click)="verifier()"  *ngIf='!(this.correct||this.afficher)'>Vérifier la réponse</button>
+                <button class='btn btn-primary' *ngIf='this.premier&&!this.afficher' (click)="display()">afficher la réponse</button>
+                <button class='btn btn-primary' *ngIf='this.correct||this.afficher' (click)="next()">passer à une question suivant</button>
+            </form>
+        </div>
 
         
     </div>
 </div>
-<div *ngIf='this.TypeExo[1]'>
+
+
+<!-- <div *ngIf='this.TypeExo[1]'>
     <div class="centrer">
         <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
             <div class="example-box" *ngFor="let movie of this.listequestion" cdkDrag>
@@ -37,8 +62,8 @@
     </div>
     
     <div class="centrer">
-        <button *ngIf="!this.correct" class="centrerSansFlex"(click)="verifier()">Verifier les réponses</button>
-        <button *ngIf='this.correct' (click)="next()">passer a la série suivante</button>
+        <button class='btn btn-primary' *ngIf="!this.correct" class="centrerSansFlex"(click)="verifier()">Verifier les réponses</button>
+        <button class='btn btn-primary' *ngIf='this.correct' (click)="next()">passer a la série suivante</button>
 
     </div>
-</div>
+</div> -->

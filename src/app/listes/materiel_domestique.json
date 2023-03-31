@@ -1,25 +1,112 @@
 [
-    {"question":"canape","ans":"ソファー" },
-    {"question":"lit","ans":"ベット" },
-    {"question":"le stylo (a bille)","ans":"ボールペン"},
-    {"question":"cahier","ans":"ノト"},
-    {"question":"calendrier","ans":"カレンダ"},
-    {"question":"radio","ans":"ラジオ"},
-    {"question":"chaine hifi","ans":"ステレオ"},
-    {"question":"TV","ans":"テレビ"},
-    {"question":"TV","ans":"テレビジョン"},
-    {"question":"Appareil photo","ans":"カメラ"},
-    {"question":"Ordinateur","ans":"コンピュタ"},
-    {"question":"PC","ans":"パソコン"},
-    {"question":"climatiseur","ans":"エアコン"},
-    {"question":"Telecommande","ans":"リモコン"},
-    {"question":"Carte Banquaire","ans":"クレジットカード"},
-    {"question":"La porte","ans":"ドア"},
-    {"question":"La lampe","ans":"ランプ"},
-    {"question":"La table","ans":"タボル"},
-    {"question":"La fourchette","ans":"フォーク"},
-    {"question":"Le couteau","ans":"ナイフ"},
-    {"question":"la cuillère","ans":"スプーン"},
-    {"question":"toillettes","ans":"トイレ"}
-    
+    {
+        "francais": "canape",
+        "japonais": "ソファー",
+        "themeId":5
+    },
+    {
+        "francais": "lit",
+        "japonais": "ベット",
+        "themeId":5
+    },
+    {
+        "francais": "le stylo (a bille)",
+        "japonais": "ボールペン",
+        "themeId":5
+    },
+    {
+        "francais": "cahier",
+        "japonais": "ノト",
+        "themeId":5
+    },
+    {
+        "francais": "calendrier",
+        "japonais": "カレンダ",
+        "themeId":5
+    },
+    {
+        "francais": "radio",
+        "japonais": "ラジオ",
+        "themeId":5
+    },
+    {
+        "francais": "chaine hifi",
+        "japonais": "ステレオ",
+        "themeId":5
+    },
+    {
+        "francais": "TV",
+        "japonais": "テレビ",
+        "themeId":5
+    },
+    {
+        "francais": "TV",
+        "japonais": "テレビジョン",
+        "themeId":5
+    },
+    {
+        "francais": "Appareil photo",
+        "japonais": "カメラ",
+        "themeId":5
+    },
+    {
+        "francais": "Ordinateur",
+        "japonais": "コンピュタ",
+        "themeId":5
+    },
+    {
+        "francais": "PC",
+        "japonais": "パソコン",
+        "themeId":5
+    },
+    {
+        "francais": "climatiseur",
+        "japonais": "エアコン",
+        "themeId":5
+    },
+    {
+        "francais": "Telecommande",
+        "japonais": "リモコン",
+        "themeId":5
+    },
+    {
+        "francais": "Carte Banquaire",
+        "japonais": "クレジットカード",
+        "themeId":5
+    },
+    {
+        "francais": "La porte",
+        "japonais": "ドア",
+        "themeId":5
+    },
+    {
+        "francais": "La lampe",
+        "japonais": "ランプ",
+        "themeId":5
+    },
+    {
+        "francais": "La table",
+        "japonais": "タボル",
+        "themeId":5
+    },
+    {
+        "francais": "La fourchette",
+        "japonais": "フォーク",
+        "themeId":5
+    },
+    {
+        "francais": "Le couteau",
+        "japonais": "ナイフ",
+        "themeId":5
+    },
+    {
+        "francais": "la cuillère",
+        "japonais": "スプーン",
+        "themeId":5
+    },
+    {
+        "francais": "toillettes",
+        "japonais": "トイレ",
+        "themeId":5
+    }
 ]

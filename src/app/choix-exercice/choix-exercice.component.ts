@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ThemeService } from '../API/service/services/theme/theme.service';
 
 @Component({
   selector: 'app-choix-exercice',
@@ -7,38 +8,19 @@ import { Router } from '@angular/router';
   styleUrls: ['./choix-exercice.component.css']
 })
 export class ChoixExerciceComponent implements OnInit {
-
-  constructor(private router:Router) { }
+  exo:string='';
+  listeOption:any[]=[];
+  constructor(private router:Router,private service: ThemeService) { }
 
   ngOnInit(): void {
+    this.service.getAllTheme().then((r:any)=>{
+      this.listeOption = r;
+    })
   }
+  
+
   choixDeLexercice(){
-    let value = <HTMLSelectElement>document.getElementById('selectExercice');
-    let exercice = value[value.selectedIndex].textContent;
-    switch(exercice){
-      case "formules de politesse":
-        localStorage.setItem("exo","formules");
-        this.router.navigateByUrl('/exercice');
-        break;
-      case "katakana":
-        localStorage.setItem("exo","katakana");
-        this.router.navigateByUrl('/exercice');
-        break;
-      case "hiragana":
-        localStorage.setItem("exo","hiragana");
-        this.router.navigateByUrl('/exercice');
-        break;
-      case "premier kanji":
-        localStorage.setItem("exo","premier kanji");
-        this.router.navigateByUrl('/exercice');
-        break;
-      case "mobilier":
-        localStorage.setItem("exo","mobilier");
-        this.router.navigateByUrl('/exercice');
-        break;
-      default:
-        break;
-            
-    }
+    localStorage.setItem("exo",this.exo)
+    this.router.navigateByUrl('exercice')
   }
 }

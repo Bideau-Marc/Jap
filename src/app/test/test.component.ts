@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CaractereService } from '../API/service/services/caractere/caractere.service';
 
 @Component({
   selector: 'app-test',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: CaractereService) { }
 
   ngOnInit(): void {
+    this.log()
   }
 
+  async log(){
+    // await (await this.service.getCaractereByTheme(2)).subscribe(r=>{
+      // console.log(r,"r");
+      
+    // })
+  }
 }

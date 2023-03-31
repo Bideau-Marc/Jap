@@ -1,22 +1,142 @@
 [
-    {"question":"Une personne","ans":"人"},
-    {"question":"Homme","ans":"男"},
-    {"question":"Femme","ans":"女"},
-    {"question":"Enfant","ans":"子"},
-    {"question":"Soleil","ans":"日"},
-    {"question":"la lune","ans":"月"},
-    {"question":"le temps","ans":"時"},
-    {"question":"l'eau","ans":"水"},
-    {"question":"le feu","ans":"火"},
-    {"question":"la terre ","ans":"土"},
-    {"question":"le vent","ans":"風"},
-    {"question":"le ciel","ans":"空"},
-    {"question":"la montagne","ans":"山"},
-    {"question":"la rivière","ans":"川"},
-    {"question":"l'arbre","ans":"木"},
-    {"question":"la fleur","ans":"花"},
-    {"question":"la pluie","ans":"雨"},
-    {"question":"la neige","ans":"雪"},
-    {"question":"l'argent","ans":"金"},
-    {"question":"le sabre","ans":"刀"}   
+    {
+        "francais": "Une personne",
+        "kanji": "人",
+        "japonaisKata": "",
+        "japonaisHira": "ひと",
+        "themeId": 6
+    },
+    {
+        "francais": "Homme",
+        "kanji": "男",
+        "japonaisKata": "",
+        "japonaisHira": "おとこ",
+        "themeId": 6
+    },
+    {
+        "francais": "Femme",
+        "kanji": "女",
+        "japonaisKata": "",
+        "japonaisHira": "おんな",
+        "themeId": 6
+    },
+    {
+        "francais": "Enfant",
+        "kanji": "子",
+        "japonaisKata": "",
+        "japonaisHira": "こ",
+        "themeId": 6
+    },
+    {
+        "francais": "Soleil",
+        "kanji": "日",
+        "japonaisKata": "ひ",
+        "japonaisHira": "",
+        "themeId": 6
+    },
+    {
+        "francais": "la lune",
+        "kanji": "月",
+        "japonaisKata": "",
+        "japonaisHira": "つき",
+        "themeId": 6
+    },
+    {
+        "francais": "le temps",
+        "kanji": "時",
+        "japonaisKata": "",
+        "japonaisHira": "とき",
+        "themeId": 6
+    },
+    {
+        "francais": "l'eau",
+        "kanji": "水",
+        "japonaisKata": "",
+        "japonaisHira": "みう",
+        "themeId": 6
+    },
+    {
+        "francais": "le feu",
+        "kanji": "火",
+        "japonaisKata": "",
+        "japonaisHira": "ひ",
+        "themeId": 6
+    },
+    {
+        "francais": "la terre ",
+        "kanji": "土",
+        "japonaisKata": "",
+        "japonaisHira": "つち",
+        "themeId": 6
+    },
+    {
+        "francais": "le vent",
+        "kanji": "風",
+        "japonaisKata": "",
+        "japonaisHira": "かぜ",
+        "themeId": 6
+    },
+    {
+        "francais": "le ciel",
+        "kanji": "空",
+        "japonaisKata": "",
+        "japonaisHira": "そら",
+        "themeId": 6
+    },
+    {
+        "francais": "la montagne",
+        "kanji": "山",
+        "japonaisKata": "",
+        "japonaisHira": "やま",
+        "themeId": 6
+    },
+    {
+        "francais": "la rivière",
+        "kanji": "川",
+        "japonaisKata": "",
+        "japonaisHira": "かわ",
+        "themeId": 6
+    },
+    {
+        "francais": "l'arbre",
+        "kanji": "木",
+        "japonaisKata": "",
+        "japonaisHira": "き",
+        "themeId": 6
+    },
+    {
+        "francais": "la fleur",
+        "kanji": "花",
+        "japonaisKata": "",
+        "japonaisHira": "はな",
+        "themeId": 6
+    },
+    {
+        "francais": "la pluie",
+        "kanji": "雨",
+        "japonaisKata": "",
+        "japonaisHira": "あめ",
+        "themeId": 6
+    },
+    {
+        "francais": "la neige",
+        "kanji": "雪",
+        "japonaisKata": "",
+        "japonaisHira": "ゆき",
+        "themeId": 6
+    },
+    {
+        "francais": "l'argent",
+        "kanji": "金",
+        "japonaisKata": "",
+        "japonaisHira": "はね",
+        "themeId": 6
+    },
+    {
+        "francais": "le sabre",
+        "kanji": "刀",
+        "japonaisKata": "",
+        "japonaisHira": "かたな",
+        "themeId": 6
+    }
 ]
