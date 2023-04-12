@@ -20,6 +20,6 @@ export class AppComponent {
   }
 
   goToProducts(){
-    this.router.navigateByUrl("/mainPage")
+    this.router.navigateByUrl("/controle")
   }
 }

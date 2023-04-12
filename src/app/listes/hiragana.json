@@ -1,357 +1,499 @@
 [
     {
-        "question": "a",
-        "ans": "あ",
-        "themeId":2
+        "francais": "a",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "あ",
+        "themeId": 2
     },
     {
-        "question": "i",
-        "ans": "い",
-        "themeId":2
+        "francais": "i",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "い",
+        "themeId": 2
     },
     {
-        "question": "u",
-        "ans": "う",
-        "themeId":2
+        "francais": "u",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "う",
+        "themeId": 2
     },
     {
-        "question": "e",
-        "ans": "え",
-        "themeId":2
+        "francais": "e",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "え",
+        "themeId": 2
     },
     {
-        "question": "o",
-        "ans": "お",
-        "themeId":2
+        "francais": "o",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "お",
+        "themeId": 2
     },
     {
-        "question": "ka",
-        "ans": "か",
-        "themeId":2
+        "francais": "ka",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "か",
+        "themeId": 2
     },
     {
-        "question": "ki",
-        "ans": "き",
-        "themeId":2
+        "francais": "ki",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "き",
+        "themeId": 2
     },
     {
-        "question": "ku",
-        "ans": "く",
-        "themeId":2
+        "francais": "ku",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "く",
+        "themeId": 2
     },
     {
-        "question": "ke",
-        "ans": "け",
-        "themeId":2
+        "francais": "ke",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "け",
+        "themeId": 2
     },
     {
-        "question": "ko",
-        "ans": "こ",
-        "themeId":2
+        "francais": "ko",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "こ",
+        "themeId": 2
     },
     {
-        "question": "sa",
-        "ans": "さ",
-        "themeId":2
+        "francais": "sa",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "さ",
+        "themeId": 2
     },
     {
-        "question": "shi",
-        "ans": "し",
-        "themeId":2
+        "francais": "shi",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "し",
+        "themeId": 2
     },
     {
-        "question": "su",
-        "ans": "す",
-        "themeId":2
+        "francais": "su",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "す",
+        "themeId": 2
     },
     {
-        "question": "se",
-        "ans": "せ",
-        "themeId":2
+        "francais": "se",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "せ",
+        "themeId": 2
     },
     {
-        "question": "so",
-        "ans": "そ",
-        "themeId":2
+        "francais": "so",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "そ",
+        "themeId": 2
     },
     {
-        "question": "ta",
-        "ans": "な",
-        "themeId":2
+        "francais": "ta",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "な",
+        "themeId": 2
     },
     {
-        "question": "Chi",
-        "ans": "チ",
-        "themeId":2
+        "francais": "Chi",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "チ",
+        "themeId": 2
     },
     {
-        "question": "tu",
-        "ans": "ツ",
-        "themeId":2
+        "francais": "tu",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "ツ",
+        "themeId": 2
     },
     {
-        "question": "te",
-        "ans": "テ",
-        "themeId":2
+        "francais": "te",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "テ",
+        "themeId": 2
     },
     {
-        "question": "to",
-        "ans": "ト",
-        "themeId":2
+        "francais": "to",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "と",
+        "themeId": 2
     },
     {
-        "question": "na",
-        "ans": "な",
-        "themeId":2
+        "francais": "na",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "な",
+        "themeId": 2
     },
     {
-        "question": "ni",
-        "ans": "に",
-        "themeId":2
+        "francais": "ni",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "に",
+        "themeId": 2
     },
     {
-        "question": "nu",
-        "ans": "ぬ",
-        "themeId":2
+        "francais": "nu",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "ぬ",
+        "themeId": 2
     },
     {
-        "question": "ne",
-        "ans": "ね",
-        "themeId":2
+        "francais": "ne",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "ね",
+        "themeId": 2
     },
     {
-        "question": "no",
-        "ans": "の",
-        "themeId":2
+        "francais": "no",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "の",
+        "themeId": 2
     },
     {
-        "question": "ha",
-        "ans": "は",
-        "themeId":2
+        "francais": "ha",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "は",
+        "themeId": 2
     },
     {
-        "question": "hi",
-        "ans": "ひ",
-        "themeId":2
+        "francais": "hi",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "ひ",
+        "themeId": 2
     },
     {
-        "question": "fu",
-        "ans": "ふ",
-        "themeId":2
+        "francais": "fu",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "ふ",
+        "themeId": 2
     },
     {
-        "question": "he",
-        "ans": "ヘ",
-        "themeId":2
+        "francais": "he",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "ヘ",
+        "themeId": 2
     },
     {
-        "question": "ho",
-        "ans": "ほ",
-        "themeId":2
+        "francais": "ho",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "ほ",
+        "themeId": 2
     },
     {
-        "question": "ma",
-        "ans": "ま",
-        "themeId":2
+        "francais": "ma",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "ま",
+        "themeId": 2
     },
     {
-        "question": "mi",
-        "ans": "み",
-        "themeId":2
+        "francais": "mi",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "み",
+        "themeId": 2
     },
     {
-        "question": "mu",
-        "ans": "む",
-        "themeId":2
+        "francais": "mu",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "む",
+        "themeId": 2
     },
     {
-        "question": "me",
-        "ans": "め",
-        "themeId":2
+        "francais": "me",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "め",
+        "themeId": 2
     },
     {
-        "question": "mo",
-        "ans": "も",
-        "themeId":2
+        "francais": "mo",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "も",
+        "themeId": 2
     },
     {
-        "question": "ya",
-        "ans": "や",
-        "themeId":2
+        "francais": "ya",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "や",
+        "themeId": 2
     },
     {
-        "question": "yu",
-        "ans": "ゆ",
-        "themeId":2
+        "francais": "yu",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "ゆ",
+        "themeId": 2
     },
     {
-        "question": "yo",
-        "ans": "よ",
-        "themeId":2
+        "francais": "yo",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "よ",
+        "themeId": 2
     },
     {
-        "question": "ra",
-        "ans": "ら",
-        "themeId":2
+        "francais": "ra",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "ら",
+        "themeId": 2
     },
     {
-        "question": "ri",
-        "ans": "り",
-        "themeId":2
+        "francais": "ri",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "り",
+        "themeId": 2
     },
     {
-        "question": "ru",
-        "ans": "る",
-        "themeId":2
+        "francais": "ru",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "る",
+        "themeId": 2
     },
     {
-        "question": "re",
-        "ans": "れ",
-        "themeId":2
+        "francais": "re",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "れ",
+        "themeId": 2
     },
     {
-        "question": "ro",
-        "ans": "ろ",
-        "themeId":2
+        "francais": "ro",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "ろ",
+        "themeId": 2
     },
     {
-        "question": "wa",
-        "ans": "わ",
-        "themeId":2
+        "francais": "wa",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "わ",
+        "themeId": 2
     },
     {
-        "question": "wo",
-        "ans": "を",
-        "themeId":2
+        "francais": "wo",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "を",
+        "themeId": 2
     },
     {
-        "question": "ga",
-        "ans": "が",
-        "themeId":2
+        "francais": "ga",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "が",
+        "themeId": 2
     },
     {
-        "question": "gi",
-        "ans": "ぎ",
-        "themeId":2
+        "francais": "gi",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "ぎ",
+        "themeId": 2
     },
     {
-        "question": "gu",
-        "ans": "ぐ",
-        "themeId":2
+        "francais": "gu",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "ぐ",
+        "themeId": 2
     },
     {
-        "question": "ge",
-        "ans": "げ",
-        "themeId":2
+        "francais": "ge",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "げ",
+        "themeId": 2
     },
     {
-        "question": "go",
-        "ans": "ご",
-        "themeId":2
+        "francais": "go",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "ご",
+        "themeId": 2
     },
     {
-        "question": "za",
-        "ans": "ざ",
-        "themeId":2
+        "francais": "za",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "ざ",
+        "themeId": 2
     },
     {
-        "question": "Ji",
-        "ans": "じ",
-        "themeId":2
+        "francais": "Ji",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "じ",
+        "themeId": 2
     },
     {
-        "question": "zu",
-        "ans": "ず",
-        "themeId":2
+        "francais": "zu",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "ず",
+        "themeId": 2
     },
     {
-        "question": "ze",
-        "ans": "ぜ",
-        "themeId":2
+        "francais": "ze",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "ぜ",
+        "themeId": 2
     },
     {
-        "question": "zo",
-        "ans": "ぞ",
-        "themeId":2
+        "francais": "zo",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "ぞ",
+        "themeId": 2
     },
     {
-        "question": "da",
-        "ans": "だ",
-        "themeId":2
+        "francais": "da",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "だ",
+        "themeId": 2
     },
     {
-        "question": "Ji",
-        "ans": "ぢ",
-        "themeId":2
+        "francais": "Ji",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "ぢ",
+        "themeId": 2
     },
     {
-        "question": "zu",
-        "ans": "づ",
-        "themeId":2
+        "francais": "zu",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "づ",
+        "themeId": 2
     },
     {
-        "question": "de",
-        "ans": "で",
-        "themeId":2
+        "francais": "de",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "で",
+        "themeId": 2
     },
     {
-        "question": "do",
-        "ans": "ど",
-        "themeId":2
+        "francais": "do",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "ど",
+        "themeId": 2
     },
     {
-        "question": "ba",
-        "ans": "ば",
-        "themeId":2
+        "francais": "ba",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "ば",
+        "themeId": 2
     },
     {
-        "question": "bi",
-        "ans": "び",
-        "themeId":2
+        "francais": "bi",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "び",
+        "themeId": 2
     },
     {
-        "question": "bu",
-        "ans": "ぶ",
-        "themeId":2
+        "francais": "bu",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "ぶ",
+        "themeId": 2
     },
     {
-        "question": "be",
-        "ans": "べ",
-        "themeId":2
+        "francais": "be",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "べ",
+        "themeId": 2
     },
     {
-        "question": "bo",
-        "ans": "ぼ",
-        "themeId":2
+        "francais": "bo",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "ぼ",
+        "themeId": 2
     },
     {
-        "question": "pa",
-        "ans": "ぱ",
-        "themeId":2
+        "francais": "pa",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "ぱ",
+        "themeId": 2
     },
     {
-        "question": "pi",
-        "ans": "ぱ",
-        "themeId":2
+        "francais": "pi",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "ぱ",
+        "themeId": 2
     },
     {
-        "question": "pu",
-        "ans": "ぷ",
-        "themeId":2
+        "francais": "pu",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "ぷ",
+        "themeId": 2
     },
     {
-        "question": "pe",
-        "ans": "ぺ",
-        "themeId":2
+        "francais": "pe",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "ぺ",
+        "themeId": 2
     },
     {
-        "question": "po",
-        "ans": "ぽ",
-        "themeId":2
+        "francais": "po",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "ぽ",
+        "themeId": 2
     },
     {
-        "question": "n",
-        "ans": "ん",
-        "themeId":2
+        "francais": "n",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "ん",
+        "themeId": 2
     }
 ]

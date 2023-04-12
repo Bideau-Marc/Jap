@@ -1,147 +1,212 @@
 [
     {
         "francais": "oui",
-        "japonais": "はい",
-        "themeId":3
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "はい",
+        "themeId": 3
     },
     {
         "francais": "non",
-        "japonais": "いいえ",
-        "themeId":3
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "いいえ",
+        "themeId": 3
     },
     {
         "francais": "svp",
-        "japonais": "おねがいします",
-        "themeId":3
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "おねがいします",
+        "themeId": 3
     },
     {
         "francais": "merci",
-        "japonais": "ありがとう",
-        "themeId":3
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "ありがとう",
+        "themeId": 3
     },
     {
         "francais": "merci poli",
-        "japonais": "ありがとうございます",
-        "themeId":3
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "ありがとうございます",
+        "themeId": 3
     },
     {
         "francais": "merci beaucoup",
-        "japonais": "ありがとうございます",
-        "themeId":3
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "ありがとうございます",
+        "themeId": 3
     },
     {
         "francais": "de rien",
-        "japonais": "どういたしまして",
-        "themeId":3
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "どういたしまして",
+        "themeId": 3
     },
     {
         "francais": "bonjour",
-        "japonais": "こんにちは",
-        "themeId":3
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "こんにちは",
+        "themeId": 3
     },
     {
         "francais": "bonjour du matin (poli)",
-        "japonais": "おはよう(ございます)",
-        "themeId":3
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "おはよう(ございます)",
+        "themeId": 3
     },
     {
         "francais": "bonsoir",
-        "japonais": "こんばんは",
-        "themeId":3
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "こんばんは",
+        "themeId": 3
     },
     {
         "francais": "comment ça va",
-        "japonais": "おｹﾞﾝｷですか",
-        "themeId":3
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "おｹﾞﾝｷですか",
+        "themeId": 3
+    },
+    {
+        "francais": "comment ça va",
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "おｹﾞﾝｷですか",
+        "themeId": 3
     },
     {
         "francais": "ça va",
-        "japonais": "はい，げんきです",
-        "themeId":3
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "はい，げんきです",
+        "themeId": 3
     },
     {
         "francais": "au revoir",
-        "japonais": "またん",
-        "themeId":3
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "またん",
+        "themeId": 3
     },
     {
         "francais": "au revoir (adieu)",
-        "japonais": "さよなら",
-        "themeId":3
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "さよなら",
+        "themeId": 3
     },
     {
         "francais": "bonne nuit",
-        "japonais": "おやすみ",
-        "themeId":3
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "おやすみ",
+        "themeId": 3
     },
     {
         "francais": "a demain",
-        "japonais": "またあした",
-        "themeId":3
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "またあした",
+        "themeId": 3
     },
     {
         "francais": "enchanté",
-        "japonais": "はじめまして",
-        "themeId":3
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "はじめまして",
+        "themeId": 3
     },
     {
         "francais": "je vous en prie (entrez)",
-        "japonais": "どおぞ",
-        "themeId":3
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "どおぞ",
+        "themeId": 3
     },
     {
         "francais": "bon app",
-        "japonais": "いただきます",
-        "themeId":3
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "いただきます",
+        "themeId": 3
     },
     {
         "francais": "désolé",
-        "japonais": "ごめん",
-        "themeId":3
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "ごめん",
+        "themeId": 3
     },
     {
         "francais": "excusez-moi",
-        "japonais": "すみません",
-        "themeId":3
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "すみません",
+        "themeId": 3
     },
     {
         "francais": "bon travail",
-        "japonais": "おつかねさまでした",
-        "themeId":3
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "おつかねさまでした",
+        "themeId": 3
     },
     {
         "francais": "j'y vais",
-        "japonais": "いってきます",
-        "themeId":3
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "いってきます",
+        "themeId": 3
     },
     {
         "francais": "bonne journée",
-        "japonais": "いってらっしゃい",
-        "themeId":3
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "いってらっしゃい",
+        "themeId": 3
     },
     {
         "francais": "je suis rentré",
-        "japonais": "ただいま",
-        "themeId":3
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "ただいま",
+        "themeId": 3
     },
     {
         "francais": "bon retour(poli)",
-        "japonais": "おかえり(なさい)",
-        "themeId":3
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "おかえり(なさい)",
+        "themeId": 3
     },
     {
         "francais": "bienvenu (magasin)",
-        "japonais": "いらっしゃいませ",
-        "themeId":3
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "いらっしゃいませ",
+        "themeId": 3
     },
     {
         "francais": "bienvenu",
-        "japonais": "ようこそ",
-        "themeId":3
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "ようこそ",
+        "themeId": 3
     },
     {
         "francais": "je rentre (chez quelqu'un)",
-        "japonais": "おｼﾞｬﾏします",
-        "themeId":3
+        "kanji": "",
+        "japonaisKata": "",
+        "japonaisHira": "おｼﾞｬﾏします",
+        "themeId": 3
     }
 ]

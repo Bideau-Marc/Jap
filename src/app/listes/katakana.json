@@ -1,357 +1,499 @@
 [
     {
         "francais": "A",
-        "japonais": "ア",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ア",
+        "themeId": 1
     },
     {
         "francais": "I",
-        "japonais": "イ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "イ",
+        "themeId": 1
     },
     {
         "francais": "U",
-        "japonais": "ウ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ウ",
+        "themeId": 1
     },
     {
         "francais": "E",
-        "japonais": "エ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "エ",
+        "themeId": 1
     },
     {
         "francais": "O",
-        "japonais": "オ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "オ",
+        "themeId": 1
     },
     {
         "francais": "KA",
-        "japonais": "カ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "カ",
+        "themeId": 1
     },
     {
         "francais": "KI",
-        "japonais": "キ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "キ",
+        "themeId": 1
     },
     {
         "francais": "KU",
-        "japonais": "ク",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ク",
+        "themeId": 1
     },
     {
         "francais": "KE",
-        "japonais": "ケ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ケ",
+        "themeId": 1
     },
     {
         "francais": "KO",
-        "japonais": "コ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "コ",
+        "themeId": 1
     },
     {
         "francais": "SA",
-        "japonais": "サ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "サ",
+        "themeId": 1
     },
     {
         "francais": "SHI",
-        "japonais": "シ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "シ",
+        "themeId": 1
     },
     {
         "francais": "SU",
-        "japonais": "ス",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ス",
+        "themeId": 1
     },
     {
         "francais": "SE",
-        "japonais": "セ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "セ",
+        "themeId": 1
     },
     {
         "francais": "SO",
-        "japonais": "ソ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ソ",
+        "themeId": 1
     },
     {
         "francais": "TA",
-        "japonais": "タ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "タ",
+        "themeId": 1
     },
     {
         "francais": "CHI",
-        "japonais": "チ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "チ",
+        "themeId": 1
     },
     {
         "francais": "TU",
-        "japonais": "ツ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ツ",
+        "themeId": 1
     },
     {
         "francais": "TE",
-        "japonais": "テ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "テ",
+        "themeId": 1
     },
     {
         "francais": "TO",
-        "japonais": "ト",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ト",
+        "themeId": 1
     },
     {
         "francais": "NA",
-        "japonais": "ナ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ナ",
+        "themeId": 1
     },
     {
         "francais": "NI",
-        "japonais": "ニ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ニ",
+        "themeId": 1
     },
     {
         "francais": "NU",
-        "japonais": "ヌ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ヌ",
+        "themeId": 1
     },
     {
         "francais": "NE",
-        "japonais": "ネ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ネ",
+        "themeId": 1
     },
     {
         "francais": "NO",
-        "japonais": "ノ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ノ",
+        "themeId": 1
     },
     {
         "francais": "HA",
-        "japonais": "ハ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ハ",
+        "themeId": 1
     },
     {
         "francais": "HI",
-        "japonais": "ヒ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ヒ",
+        "themeId": 1
     },
     {
         "francais": "FU",
-        "japonais": "フ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "フ",
+        "themeId": 1
     },
     {
         "francais": "HE",
-        "japonais": "ヘ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ヘ",
+        "themeId": 1
     },
     {
         "francais": "HO",
-        "japonais": "ホ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ホ",
+        "themeId": 1
     },
     {
         "francais": "MA",
-        "japonais": "マ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "マ",
+        "themeId": 1
     },
     {
         "francais": "MI",
-        "japonais": "ミ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ミ",
+        "themeId": 1
     },
     {
         "francais": "MU",
-        "japonais": "ム",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ム",
+        "themeId": 1
     },
     {
         "francais": "ME",
-        "japonais": "メ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "メ",
+        "themeId": 1
     },
     {
         "francais": "MO",
-        "japonais": "モ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "モ",
+        "themeId": 1
     },
     {
         "francais": "YA",
-        "japonais": "ヤ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ヤ",
+        "themeId": 1
     },
     {
         "francais": "YU",
-        "japonais": "ユ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ユ",
+        "themeId": 1
     },
     {
         "francais": "YO",
-        "japonais": "ヨ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ヨ",
+        "themeId": 1
     },
     {
         "francais": "RA",
-        "japonais": "ラ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ラ",
+        "themeId": 1
     },
     {
         "francais": "RI",
-        "japonais": "リ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "リ",
+        "themeId": 1
     },
     {
         "francais": "RU",
-        "japonais": "ル",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ル",
+        "themeId": 1
     },
     {
         "francais": "RE",
-        "japonais": "レ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "レ",
+        "themeId": 1
     },
     {
         "francais": "RO",
-        "japonais": "ロ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ロ",
+        "themeId": 1
     },
     {
         "francais": "WA",
-        "japonais": "ワ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ワ",
+        "themeId": 1
     },
     {
         "francais": "WO",
-        "japonais": "ヲ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ヲ",
+        "themeId": 1
     },
     {
         "francais": "GA",
-        "japonais": "ガ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ガ",
+        "themeId": 1
     },
     {
         "francais": "GI",
-        "japonais": "ギ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ギ",
+        "themeId": 1
     },
     {
         "francais": "GU",
-        "japonais": "グ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "グ",
+        "themeId": 1
     },
     {
         "francais": "GE",
-        "japonais": "ゲ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ゲ",
+        "themeId": 1
     },
     {
         "francais": "GO",
-        "japonais": "ゴ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ゴ",
+        "themeId": 1
     },
     {
         "francais": "ZA",
-        "japonais": "ザ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ザ",
+        "themeId": 1
     },
     {
         "francais": "JI",
-        "japonais": "ジ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ジ",
+        "themeId": 1
     },
     {
         "francais": "ZU",
-        "japonais": "ズ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ズ",
+        "themeId": 1
     },
     {
         "francais": "ZE",
-        "japonais": "ゼ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ゼ",
+        "themeId": 1
     },
     {
         "francais": "ZO",
-        "japonais": "ゾ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ゾ",
+        "themeId": 1
     },
     {
         "francais": "dA",
-        "japonais": "ダ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ダ",
+        "themeId": 1
     },
     {
         "francais": "JI",
-        "japonais": "ヂ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ヂ",
+        "themeId": 1
     },
     {
         "francais": "ZU",
-        "japonais": "ヅ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ヅ",
+        "themeId": 1
     },
     {
         "francais": "dE",
-        "japonais": "デ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "デ",
+        "themeId": 1
     },
     {
         "francais": "dO",
-        "japonais": "ド",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ド",
+        "themeId": 1
     },
     {
         "francais": "BA",
-        "japonais": "バ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "バ",
+        "themeId": 1
     },
     {
         "francais": "BI",
-        "japonais": "ビ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ビ",
+        "themeId": 1
     },
     {
         "francais": "BU",
-        "japonais": "ブ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ブ",
+        "themeId": 1
     },
     {
         "francais": "BE",
-        "japonais": "ベ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ベ",
+        "themeId": 1
     },
     {
         "francais": "BO",
-        "japonais": "ボ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ボ",
+        "themeId": 1
     },
     {
         "francais": "PA",
-        "japonais": "パ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "パ",
+        "themeId": 1
     },
     {
         "francais": "PI",
-        "japonais": "ピ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ピ",
+        "themeId": 1
     },
     {
         "francais": "PU",
-        "japonais": "プ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "プ",
+        "themeId": 1
     },
     {
         "francais": "PE",
-        "japonais": "ペ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ペ",
+        "themeId": 1
     },
     {
         "francais": "PO",
-        "japonais": "ポ",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ポ",
+        "themeId": 1
     },
     {
         "francais": "N",
-        "japonais": "ン",
-        "themeId":1
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ン",
+        "themeId": 1
     }
 ]

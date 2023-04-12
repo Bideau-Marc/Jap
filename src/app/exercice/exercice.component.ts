@@ -9,7 +9,7 @@ import * as mobilier from '../listes/materiel_domestique.json';
 import { elementAt } from 'rxjs';
 import { CaractereService } from '../API/service/services/caractere/caractere.service';
 import { Caractere } from '../modele/caractere';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, MinLengthValidator } from '@angular/forms';
 @Component({
   selector: 'app-exercice',
   templateUrl: './exercice.component.html',
@@ -38,7 +38,10 @@ export class ExerciceComponent implements OnInit {
 
 
   answerCorrect:boolean[]=[]
-  score:number=0;
+  score:Score={
+    scoreUser:0,
+    totalScore:0
+  }
   nbessaies:number = 0;
   premier:boolean=false;
   afficher:boolean= false;
@@ -49,7 +52,6 @@ export class ExerciceComponent implements OnInit {
   // listeJap: string[]=[]
   // listeDeVerif:{"francais":any,"japonais":any,"juste":any}[]= [];
   verified: boolean = false;
-  ans:string='';
   constructor(private service:CaractereService) { }
 
   ngOnInit(): void {
@@ -91,11 +93,8 @@ verifier(){
   //   this.premier = true;
   // }
   let forms:HTMLCollectionOf<Element>= document.getElementsByClassName('form-control');
-  console.log(this.answerCorrect, forms[0]);
   this.answerCorrect.forEach((el,i)=>{
-    console.log(el,i,this.listeInput[i]);
     if(this.listeInput[i]!=null){
-      console.log("inside",this.listeInput[i]);
       
       if(el){
         this.listeInput[i].classList.add('is-valid')
@@ -109,12 +108,18 @@ verifier(){
   })
   if(this.answerCorrect[0]&&this.answerCorrect[1]&&this.answerCorrect[2]&&this.answerCorrect[3]){
     this.correct=true;
+    console.log(this.premier);
+    
     if(!this.premier){
-      this.score++;
+      this.score.scoreUser++;
+      this.score.totalScore++;
+
     }
-    else{
-      this.premier=true;
-    }
+
+  }
+  else{
+    this.premier=true;
+    this.score.totalScore++;
   }
   // this.answer.forEach(element=>{
   //   element = element.toUpperCase()
@@ -162,6 +167,7 @@ display(){
   this.afficher = true;
 }
 next(){
+  this.expression='';
   this.listeInput.forEach(element=>{
     if(element!=null){
       element.classList.remove('is-valid')
@@ -169,7 +175,6 @@ next(){
     }
     
   })
-  this.ans =''
   // this.TypeExo = [false,false]
   this.answerCorrect=[false,false,false]
   this.answer={
@@ -237,6 +242,7 @@ setListe(file: any){
     let nbdanslaliste:number;
     nbListe = Math.floor(Math.random() * this.liste.length)//choisi un rang dans la liste 
     nbdanslaliste = Math.floor(Math.random() * 4)// choisi fr ou jap 
+    
     switch(true){
       case nbdanslaliste==0 &&  this.liste[nbListe].francais!='':
         this.expression = this.liste[nbListe].francais;//setup question
@@ -260,20 +266,11 @@ setListe(file: any){
 
         break;
     }
-    console.log(this.answer);
-   
-    // for(let i=0; i<3;i++){
-    //   console.log(this.answer[i],this.answer[i]==='');
-      
-    //   if(this.answer[i]===''){
-    //     console.log('in', this.answerCorrect[i]);
-        
-    //     this.answerCorrect[i];
-    //     console.log('inas', this.answerCorrect[i]);
-    //   }
-    // };
-    // setTimeout(()=>console.log(this.answerCorrect),2000);
-    
+
+    if(this.expression===''){
+      this.getQuestion()
+    }
+    console.log(this.answer, this.liste[nbListe], nbListe, nbdanslaliste, this.expression);    
 
   }
   
@@ -286,4 +283,7 @@ setListe(file: any){
   //   })
   // }
 }
-
+export interface Score{
+  scoreUser:number;
+  totalScore:number
+}

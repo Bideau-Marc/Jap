@@ -1,0 +1,203 @@
+[
+    {
+        "francais": "Mon époux",
+        "kanji": "おっと",
+        "japonaisKata": "",
+        "japonaisHira": "おっと",
+        "themeId": 7
+    },
+    {
+        "francais": "mon epouse",
+        "kanji": "妻",
+        "japonaisKata": "",
+        "japonaisHira": "つま",
+        "themeId": 7
+    },
+    {
+        "francais": "mes parents",
+        "kanji": "両親",
+        "japonaisKata": "リョウシン",
+        "japonaisHira": "りょうしん",
+        "themeId": 7
+    },
+    {
+        "francais": "mon père",
+        "kanji": "父",
+        "japonaisKata": "チチ",
+        "japonaisHira": "ちち",
+        "themeId": 7
+    },
+    {
+        "francais": "Ma mère",
+        "kanji": "母",
+        "japonaisKata": "",
+        "japonaisHira": "はは",
+        "themeId": 7
+    },
+    {
+        "francais": "mon enfant",
+        "kanji": "子供",
+        "japonaisKata": "",
+        "japonaisHira": "こども",
+        "themeId": 7
+    },
+    {
+        "francais": "mon fils",
+        "kanji": "息子",
+        "japonaisKata": "",
+        "japonaisHira": "むすこ",
+        "themeId": 7
+    },
+    {
+        "francais": "ma fille",
+        "kanji": "娘",
+        "japonaisKata": "",
+        "japonaisHira": "むすめ",
+        "themeId": 7
+    },
+    {
+        "francais": "mes grands parents",
+        "kanji": "祖父母",
+        "japonaisKata": "ソフボ",
+        "japonaisHira": "",
+        "themeId": 7
+    },
+    {
+        "francais": "mon grand-père",
+        "kanji": "祖父",
+        "japonaisKata": "ソフ",
+        "japonaisHira": "",
+        "themeId": 7
+    },
+    {
+        "francais": "ma grand-mère",
+        "kanji": "祖母",
+        "japonaisKata": "ソボ",
+        "japonaisHira": "",
+        "themeId": 7
+    },
+    {
+        "francais": "mon petit enfant",
+        "kanji": "孫",
+        "japonaisKata": "",
+        "japonaisHira": "まご",
+        "themeId": 7
+    },
+    {
+        "francais": "mon jumaux/jumelle",
+        "kanji": "双子",
+        "japonaisKata": "",
+        "japonaisHira": "ふたご",
+        "themeId": 7
+    },
+    {
+        "francais": "mon frere (ainé)",
+        "kanji": "兄",
+        "japonaisKata": "",
+        "japonaisHira": "あに",
+        "themeId": 7
+    },
+    {
+        "francais": "mon frere (cadet)",
+        "kanji": "弟",
+        "japonaisKata": "",
+        "japonaisHira": "おとうと",
+        "themeId": 7
+    },
+    {
+        "francais": "mes freres/la fratrie",
+        "kanji": "兄弟",
+        "japonaisKata": "キョウダイ",
+        "japonaisHira": "",
+        "themeId": 7
+    },
+    {
+        "francais": "ma soeur (ainé)",
+        "kanji": "姉",
+        "japonaisKata": "",
+        "japonaisHira": "あね",
+        "themeId": 7
+    },
+    {
+        "francais": "ma soeur (cadette)",
+        "kanji": "妹",
+        "japonaisKata": "",
+        "japonaisHira": "いもうと",
+        "themeId": 7
+    },
+    {
+        "francais": "mon cousin (ainé)",
+        "kanji": "従兄",
+        "japonaisKata": "",
+        "japonaisHira": "いとこ",
+        "themeId": 7
+    },
+    {
+        "francais": "ma cousine (ainée)",
+        "kanji": "従兄姉",
+        "japonaisKata": "",
+        "japonaisHira": "いとこあね",
+        "themeId": 7
+    },
+    {
+        "francais": "mon cousin (cadet)",
+        "kanji": "従兄弟",
+        "japonaisKata": "",
+        "japonaisHira": "いとこおとうと",
+        "themeId": 7
+    },{
+        "francais": "ma cousine (cadette)",
+        "kanji": "従兄妹",
+        "japonaisKata": "",
+        "japonaisHira": "いとこいもうと",
+        "themeId": 7
+    },{
+        "francais": "mon oncle (ainé de son frere/soeur)",
+        "kanji": "伯父",
+        "japonaisKata": "",
+        "japonaisHira": "おじ",
+        "themeId": 7
+    },{
+        "francais": "mon oncle (cadet de son frere/soeur)",
+        "kanji": "叔父",
+        "japonaisKata": "",
+        "japonaisHira": "おじ",
+        "themeId": 7
+    },{
+        "francais": "ma tante (ainée de son frere/soeur)",
+        "kanji": "伯母",
+        "japonaisKata": "",
+        "japonaisHira": "おば",
+        "themeId": 7
+    },{
+        "francais": "ma tante (cadette de son frere/soeur)",
+        "kanji": "叔母",
+        "japonaisKata": "",
+        "japonaisHira": "かたな",
+        "themeId": 7
+    },{
+        "francais": "mon beau-frère (ainé)",
+        "kanji": "義兄",
+        "japonaisKata": "ギケイ",
+        "japonaisHira": "",
+        "themeId": 7
+    },{
+        "francais": "mon beau-frère (cadet)",
+        "kanji": "義弟",
+        "japonaisKata": "ギテイ",
+        "japonaisHira": "",
+        "themeId": 7
+    },{
+        "francais": "ma belle-soeur (ainée)",
+        "kanji": "義姉",
+        "japonaisKata": "ギシ",
+        "japonaisHira": "",
+        "themeId": 7
+    },{
+        "francais": "ma belle-soeur (cadette)",
+        "kanji": "技妹",
+        "japonaisKata": "ぎまい",
+        "japonaisHira": "",
+        "themeId": 7
+    }
+]

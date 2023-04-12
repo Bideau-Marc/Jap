@@ -10,7 +10,7 @@ import { ChoixExerciceComponent } from './choix-exercice/choix-exercice.componen
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import { TestComponent } from './test/test.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +25,8 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     DragDropModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
 
   ],
   providers: [],

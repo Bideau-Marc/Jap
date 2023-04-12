@@ -13,7 +13,7 @@ export class ChoixExerciceComponent implements OnInit {
   constructor(private router:Router,private service: ThemeService) { }
 
   ngOnInit(): void {
-    this.service.getAllTheme().then((r:any)=>{
+    this.service.getAllTheme().subscribe((r:any)=>{
       this.listeOption = r;
     })
   }

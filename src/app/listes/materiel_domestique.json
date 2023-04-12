@@ -1,112 +1,156 @@
 [
     {
         "francais": "canape",
-        "japonais": "ソファー",
-        "themeId":5
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ソファー",
+        "themeId": 5
     },
     {
         "francais": "lit",
-        "japonais": "ベット",
-        "themeId":5
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ベット",
+        "themeId": 5
     },
     {
         "francais": "le stylo (a bille)",
-        "japonais": "ボールペン",
-        "themeId":5
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ボールペン",
+        "themeId": 5
     },
     {
         "francais": "cahier",
-        "japonais": "ノト",
-        "themeId":5
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ノト",
+        "themeId": 5
     },
     {
         "francais": "calendrier",
-        "japonais": "カレンダ",
-        "themeId":5
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "カレンダ",
+        "themeId": 5
     },
     {
         "francais": "radio",
-        "japonais": "ラジオ",
-        "themeId":5
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ラジオ",
+        "themeId": 5
     },
     {
         "francais": "chaine hifi",
-        "japonais": "ステレオ",
-        "themeId":5
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ステレオ",
+        "themeId": 5
     },
     {
         "francais": "TV",
-        "japonais": "テレビ",
-        "themeId":5
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "テレビ",
+        "themeId": 5
     },
     {
         "francais": "TV",
-        "japonais": "テレビジョン",
-        "themeId":5
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "テレビジョン",
+        "themeId": 5
     },
     {
         "francais": "Appareil photo",
-        "japonais": "カメラ",
-        "themeId":5
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "カメラ",
+        "themeId": 5
     },
     {
         "francais": "Ordinateur",
-        "japonais": "コンピュタ",
-        "themeId":5
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "コンピュタ",
+        "themeId": 5
     },
     {
         "francais": "PC",
-        "japonais": "パソコン",
-        "themeId":5
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "パソコン",
+        "themeId": 5
     },
     {
         "francais": "climatiseur",
-        "japonais": "エアコン",
-        "themeId":5
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "エアコン",
+        "themeId": 5
     },
     {
         "francais": "Telecommande",
-        "japonais": "リモコン",
-        "themeId":5
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "リモコン",
+        "themeId": 5
     },
     {
         "francais": "Carte Banquaire",
-        "japonais": "クレジットカード",
-        "themeId":5
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "クレジットカード",
+        "themeId": 5
     },
     {
         "francais": "La porte",
-        "japonais": "ドア",
-        "themeId":5
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ドア",
+        "themeId": 5
     },
     {
         "francais": "La lampe",
-        "japonais": "ランプ",
-        "themeId":5
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ランプ",
+        "themeId": 5
     },
     {
         "francais": "La table",
-        "japonais": "タボル",
-        "themeId":5
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "タボル",
+        "themeId": 5
     },
     {
         "francais": "La fourchette",
-        "japonais": "フォーク",
-        "themeId":5
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "フォーク",
+        "themeId": 5
     },
     {
         "francais": "Le couteau",
-        "japonais": "ナイフ",
-        "themeId":5
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "ナイフ",
+        "themeId": 5
     },
     {
         "francais": "la cuillère",
-        "japonais": "スプーン",
-        "themeId":5
+        "kanji": "匙",
+        "japonaisHira": "さじ",
+        "japonaisKata": "スプーン",
+        "themeId": 5
     },
     {
         "francais": "toillettes",
-        "japonais": "トイレ",
-        "themeId":5
+        "kanji": "",
+        "japonaisHira": "",
+        "japonaisKata": "トイレ",
+        "themeId": 5
     }
 ]

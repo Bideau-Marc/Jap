@@ -1,8 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { lastValueFrom } from 'rxjs';
+import { Observable, firstValueFrom, lastValueFrom } from 'rxjs';
 import { Caractere } from 'src/app/modele/caractere';
+import { Theme } from 'src/app/modele/theme';
 
 @Injectable({
   providedIn: 'root'
@@ -11,14 +12,18 @@ export class CaractereService {
   url:string = 'http://localhost:3000'
   constructor(private http:HttpClient,router: Router, ) { }
 
-  public async getCaractereByTheme(themeId:/*Theme*/number ){
-    return await  lastValueFrom(this.http.get<Caractere[]>(this.url+"/caractere/the/"+themeId));
+  public  getCaractereByTheme(themeId:/*Theme*/number ){
+    return  firstValueFrom(this.http.get<Caractere[]>(this.url+"/caractere/the/"+themeId));
+  }
+
+  public getFourTheme(listeTheme:number[]){
+    return this.http.post<Caractere[]>(this.url+'/caractere/category',listeTheme);
   }
 
 
   public equals(caractere:Caractere, cara2:Caractere){
     let fr, kata,hira,kan;
-    if(caractere.francais===cara2.francais){
+    if(caractere.francais.toUpperCase()===cara2.francais.toUpperCase()){
       console.log("fr",caractere.francais,cara2.francais,caractere.francais===cara2.francais);
         fr= true;
     }

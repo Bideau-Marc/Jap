@@ -1,1 +1,11 @@
-<p>controle works!</p>
+<form [formGroup]="controle" class="form-inline" (submit)="onSubmit()"> 
+    <div *ngFor="let exo of this.exos; let index= index;" class="form-group row m-5">
+            <label class="col-sm-2 col-form-label col-form-label-sm" for="question">écrivez : {{exo.question}} en {{exo.typeResponse}}</label>
+        <div class="col-sm-10">
+            <input id="question" type="text" class="form-control form-control-sm" formControlName="exo{{index}}">
+        </div>
+    </div> 
+    <button type="submit">Terminer le Contrôle</button>
+</form>
+
+
