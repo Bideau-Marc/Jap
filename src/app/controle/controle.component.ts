@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { Caractere } from '../modele/caractere';
 import { Score } from '../exercice/exercice.component';
 import { CaractereService } from '../API/service/services/caractere/caractere.service';
 import { Theme } from '../modele/theme';
 import { ThemeService } from '../API/service/services/theme/theme.service';
-import { Exercice } from '../modele/Exercice';
+import { Exercice_Controle as Exercice } from '../modele/Exercice_Controle';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Controle } from '../modele/Controle';
+import { User } from '../modele/user';
+import { ControleService } from '../API/service/services/controle/controle-service.service';
+import { Caractere } from '../modele/Caractere';
 
 @Component({
   selector: 'app-controle',
@@ -41,13 +44,19 @@ export class ControleComponent implements OnInit {
   exos:Exercice[]=[];
   // interval = setInterval(()=>{this.setExos(); console.log("interval");
   // },1000)
-  constructor(private service:CaractereService, private theme:ThemeService) { }
+  constructor(private service:CaractereService, private theme:ThemeService , private controleService:ControleService) { }
 
   ngOnInit(): void {
         this.getAllTheme();
         console.log(
           this.service.getFourTheme([1,2,3,4])
         );        
+        let user:User = JSON.parse(sessionStorage.getItem('user')!)
+        
+        this.controleService.getControle(user).then((r)=>{
+          console.log(r,"he");
+          
+        })
   }
 
   getAllTheme(){
@@ -62,6 +71,7 @@ export class ControleComponent implements OnInit {
     for(let i =0; i< this.listeTheme.length; i++){
         await  this.listeCaractereParTheme.push(await this.service.getCaractereByTheme(this.listeTheme[i].id))
     }        
+    
     this.setExos();
   }
   setExos(){
@@ -81,19 +91,34 @@ export class ControleComponent implements OnInit {
 
 
   
-  async onSubmit() {
+  onSubmit() {
 
     console.log(this.controle.value, this.controle.getRawValue());
     let array = this.controle.value
-    let i = 0;
+    let i:number = 0;
+    let listeValue:string[]=[]
+
+    let listeQuestion:string[]=[]
     for (const[key,value] of Object.entries(this.controle.value)){
       // console.log("question",this.exos[i].question, "response",value);
-      
-      await this.exos[i].equals(value!);
+      if(value){
+        listeValue.push(value);
+      }  
+       this.exos[i].equals(value!);
+       console.log("la", typeof this.exos[i].question);
+       listeQuestion.push(this.exos[i].question)
       i++;
       
     }
-    this.getNote()
+    this.getNote();
+    let user : User = JSON.parse(sessionStorage.getItem('user')!)
+
+    let controle:Controle = { listeExercice:JSON.stringify(listeQuestion),listeReponse: JSON.stringify(listeValue), note: this.note, personneId: user.id}
+    console.log(
+     this.controleService.saveControle(controle)
+     );
+  console.log("controle", JSON.stringify(controle));
+  
   }
   getNote(){
     this.exos.forEach(element => {

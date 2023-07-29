@@ -1,0 +1,18 @@
+<p>controle-old works!</p>
+<div *ngFor="let controle of this.listeControle; let index=index" class="d-flex m-3 row border border-primary rounded">
+    <div class="col">
+        <h1>contrôle n°{{index}}</h1>
+        <p class="align-bottom">note : {{controle.note}}/20</p>
+    </div>
+    <div class="col">
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let question of controle.listeExercice">question : {{question}}</li>
+        </ul>
+    </div>
+    <div class="col">
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let reponse of controle.listeReponse">réponse : {{reponse}}</li>
+        </ul>    
+    </div>
+    
+</div>

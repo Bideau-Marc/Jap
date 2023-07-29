@@ -8,36 +8,30 @@ import  * as premierKanji from '../listes/premier_Kanji.json';
 import * as mobilier from '../listes/materiel_domestique.json';
 import { elementAt } from 'rxjs';
 import { CaractereService } from '../API/service/services/caractere/caractere.service';
-import { Caractere } from '../modele/caractere';
 import { FormControl, FormGroup, MinLengthValidator } from '@angular/forms';
+import { Exercice } from '../modele/Exercice';
+import { Caractere } from '../modele/Caractere';
 @Component({
   selector: 'app-exercice',
   templateUrl: './exercice.component.html',
   styleUrls: ['./exercice.component.css']
 })
 export class ExerciceComponent implements OnInit {
-
+  exo!: Exercice;
+  fr:boolean=true;// bool define if display input for answer in french 
+  kata:boolean= true;// bool define if display input for answer in Katakana
+  hira: boolean= true;// bool define if display input for answer in hiragana
+  kanji: boolean = true;;// bool define if display input for answer in kanji
   expression:string = "";  //value to display in the question
   // drag:boolean = false;
   correct:boolean=false; // if true the answer is/are correct 
   liste:Caractere[]= [];
-  answer:Caractere={
-    francais: '',
-    japonaisKata: '',
-    japonaisHira: '',
-    kanji: ''
-  };
-  answerUser:Caractere={
-    francais: '',
-    japonaisKata: '',
-    japonaisHira: '',
-    kanji: '',
-
-  };
+  answer!:Caractere
+  answerUser!:Caractere;
   listeInput: any[] = [];
 
 
-  answerCorrect:boolean[]=[]
+  answerCorrect:boolean[]=[false,false,false,false]
   score:Score={
     scoreUser:0,
     totalScore:0
@@ -55,6 +49,8 @@ export class ExerciceComponent implements OnInit {
   constructor(private service:CaractereService) { }
 
   ngOnInit(): void {
+    this.answer = new Caractere('','','','')
+    this.answerUser = new Caractere('','','','')
     this.setExo();
  
     
@@ -62,56 +58,82 @@ export class ExerciceComponent implements OnInit {
 
   async setExo(){
     let a = localStorage.getItem('exo')
+    
     if(a!=null){
+      console.log(a,'a');
+
       this.setListe(await this.service.getCaractereByTheme(parseInt(a)))
+      
+      
     }
     this.next()
   }
 verifier(){
+
   this.listeInput=[    document.getElementById('fra'),        document.getElementById('kata'), document.getElementById('hira'),   document.getElementById('kan')]
   console.log(
     this.listeInput
   );
   console.log(this.answer, this.answerUser);
-  this.answerCorrect = this.service.equals(this.answer,this.answerUser)
-  console.log(this.service.equals(this.answer, this.answerUser));
+  this.exo.equals()
+  console.log(this.exo.note);
+  console.log(this.exo.caractereReponse);
   
-  // switch(true){
-  //   case this.TypeExo[0]:
-  // console.log(this.answer, this.answerUser, this.answerCorrect);
-  // this.answerUser.forEach((element,index)=>{
-  //   if(this.answer[index].includes(element.toUpperCase()) && element !=""){
-  //     this.answerCorrect[index] =true
-  //     element=''
-  //   }
-  // })
-  // if(!this.premier&& this.answerCorrect[0]&& this.answerCorrect[1]&& this.answerCorrect[2]){
-  //   this.score++;
-  //   this.correct= true;
-  // }
-  // else{
-  //   this.premier = true;
-  // }
-  let forms:HTMLCollectionOf<Element>= document.getElementsByClassName('form-control');
-  this.answerCorrect.forEach((el,i)=>{
-    if(this.listeInput[i]!=null){
+  console.log(this.listeInput);
+  
+  if(this.exo.caractereReponse.francaisCorrect &&this.listeInput[0]!=null){
+    console.log('inside correctFr',this.listeInput[0]);
+    
+    this.listeInput[0].classList.add('is-valid')
+    
+    if(this.listeInput[0].classList.contains('is-invalid')){
+      console.log("infis");
       
-      if(el){
-        this.listeInput[i].classList.add('is-valid')
-        if(this.listeInput[i].classList.contains('is-invalid'))this.listeInput[i].classList.remove('is-invalid')
-      }
-      else {
-        this.listeInput[i].classList.add('is-invalid')
-      }
+      this.listeInput[0].classList.remove('is-invalid')
+      
     }
     
-  })
-  if(this.answerCorrect[0]&&this.answerCorrect[1]&&this.answerCorrect[2]&&this.answerCorrect[3]){
+    console.log('inside correctFr2',this.listeInput[0]);
+  }
+  else if(this.listeInput[0]!=null){
+    console.log("inesle");
+    
+     this.listeInput[0].classList.add('is-invalid')
+   }
+
+  if(this.exo.caractereReponse.japonaisKataCorrect&&this.listeInput[1]!=null){
+    this.listeInput[1].classList.add('is-valid')
+    if(this.listeInput[1].classList.contains('is-invalid'))this.listeInput[1].classList.remove('is-invalid')
+
+ 
+  }
+  else if(this.listeInput[1]!=null){
+    this.listeInput[1].classList.add('is-invalid')
+  }
+  if(this.exo.caractereReponse.japonaisHiraCorrect&&this.listeInput[2]!=null){
+    this.listeInput[2].classList.add('is-valid')
+    if(this.listeInput[2].classList.contains('is-invalid'))this.listeInput[2].classList.remove('is-invalid')
+    
+  }
+  else if(this.listeInput[2]!=null){
+    this.listeInput[2].classList.add('is-invalid')
+  }
+  if(this.exo.caractereReponse.kanjiCorrect&&this.listeInput[3]!=null){
+    this.listeInput[3].classList.add('is-valid')
+    if(this.listeInput[3].classList.contains('is-invalid'))this.listeInput[3].classList.remove('is-invalid')
+    
+  }
+  else if(this.listeInput[3]!=null){
+    this.listeInput[3].classList.add('is-invalid')
+  }
+  
+  
+  if(this.exo.caractereReponse.francaisCorrect&&this.exo.caractereReponse.japonaisKataCorrect&&this.exo.caractereReponse.japonaisHiraCorrect&&this.exo.caractereReponse.kanjiCorrect){
     this.correct=true;
     console.log(this.premier);
     
     if(!this.premier){
-      this.score.scoreUser++;
+      this.score.scoreUser += this.exo.note;
       this.score.totalScore++;
 
     }
@@ -121,52 +143,15 @@ verifier(){
     this.premier=true;
     this.score.totalScore++;
   }
-  // this.answer.forEach(element=>{
-  //   element = element.toUpperCase()
-  //   if(element.includes(this.ans.toUpperCase()) && this.ans !=""){
-    //   this.correct= true;
-    //   this.ans = ""
-    //   if(!this.premier){
-    //     this.score++;
-    //   }
-    // }
-    // else{
-    //   this.premier = true;
-    // }
-  // })
-  
-  //     break;
-  //   case this.TypeExo[1]:
-  //     let listeVerif:{"francais":any,"japonais":any}[]= [];
-  //     for(let i = 0; i<this.listequestion.length;i++){
-  //       listeVerif.push({"francais":this.listequestion[i],"japonais":this.listeJap[i]})
-  //     }
-  //     listeVerif.forEach(element=>{
-  //        if(this.liste.filter(a=> a.francais ==element.francais && a.japonais ==element.japonais).length!=0){
-  //         this.listeDeVerif.push({"francais":element.francais,"japonais":element.japonais,"juste":"juste"})
-  //        }
-  //        else
-  //          this.listeDeVerif.push({"francais":element.francais,"japonais":element.japonais,"juste":"faux"})
-  //     });
-  //     this.verified = true;
-  //     this.correct = true; 
-  //     this.listeDeVerif.forEach(element=>{
-  //       if(element.juste==="juste"){
-  //         this.score++;
-  //       }
-  //       this.nbessaies++;
-  //     });
-  //     break;
-  //   default:
-  //     break;
 
-  // }
  
 }
 display(){
   this.afficher = true;
 }
 next(){
+  console.log(this.exo);
+  
   this.expression='';
   this.listeInput.forEach(element=>{
     if(element!=null){
@@ -176,19 +161,18 @@ next(){
     
   })
   // this.TypeExo = [false,false]
-  this.answerCorrect=[false,false,false]
-  this.answer={
-    francais: '',
-    japonaisKata: '',
-    japonaisHira: '',
-    kanji: ''
-  };
-  this.answerUser={
-    francais: '',
-    japonaisKata: '',
-    japonaisHira: '',
-    kanji: ''
+  this.answerCorrect=[false,false,false,false]
+  console.log(this.answer);
+  
+  this.answer.reset();
+  if(this.exo!=undefined){
+    this.exo.caractere.reset();
+    this.exo.caractereReponse.reset();
   }
+  this.fr = true;
+  this.hira = true;
+  this.kata = true;
+  this.kanji = true;
   // this.getTypeExo();
   this.shuffleArray(this.liste)
   this.getQuestion();
@@ -220,8 +204,11 @@ next(){
 }
 setListe(file: any){
     console.log("debut", file[0]);
+    console.log(file);
+    
     file.forEach((element:any) => {
-        this.liste.push({francais:element.francais,japonaisHira:element.japonaisHira, japonaisKata:element.japonaisKata, kanji:element.kanji})
+      let caractere = new Caractere(element.francais,element.japonaisHira, element.japonaisKata,element.kanji )
+        this.liste.push(caractere)
     });
     console.log("fin de setListe", this.liste, this.liste.length);
     
@@ -242,35 +229,59 @@ setListe(file: any){
     let nbdanslaliste:number;
     nbListe = Math.floor(Math.random() * this.liste.length)//choisi un rang dans la liste 
     nbdanslaliste = Math.floor(Math.random() * 4)// choisi fr ou jap 
+    this.exo = new Exercice(this.liste[nbListe])
+    this.expression =this.exo.question;
+    console.log(this.exo);
+    switch(this.exo.typeOfQuestion){
+              case "francais":
+                this.exo.caractereReponse.francais = this.exo.question
+                this.fr = false;
+                break;
+              case "hiragana":
+                this.exo.caractereReponse.japonaisHira = this.exo.question
+                this.hira = false;
+                break;
+              case "katakana":
+                this.exo.caractereReponse.japonaisKata = this.exo.question;
+                this.kata = false;
+                break;
+              case "kanji":
+                this.exo.caractereReponse.kanji = this.exo.question
+                this.kanji = false;
+                break;
+              default:
+                break;
+     }
+
+
+  
+     this.answer = this.exo.caractere
+     console.log(this.answer);
     
-    switch(true){
-      case nbdanslaliste==0 &&  this.liste[nbListe].francais!='':
-        this.expression = this.liste[nbListe].francais;//setup question
-        this.answerUser.francais= this.liste[nbListe].francais;
-        this.answer= this.liste[nbListe]//setup answer
-        break;
-      case nbdanslaliste==1 && this.liste[nbListe].japonaisHira!='':
-        this.expression = this.liste[nbListe].japonaisHira;//setup question
-        this.answerUser.japonaisHira= this.liste[nbListe].japonaisHira;
-        this.answer= this.liste[nbListe]//setup answer
-        break; 
-      case nbdanslaliste==2 && this.liste[nbListe].japonaisKata!='':
-        this.expression = this.liste[nbListe].japonaisKata;//setup question
-        this.answerUser.japonaisKata= this.liste[nbListe].japonaisKata;
-        this.answer= this.liste[nbListe]//setup answer
-        break;
-      case nbdanslaliste==3 && this.liste[nbListe].kanji!='':
-        this.expression = this.liste[nbListe].kanji;//setup question
-        this.answerUser.kanji= this.liste[nbListe].kanji;
-        this.answer= this.liste[nbListe]//setup answer
+    // switch(true){
+    //   case nbdanslaliste==0 &&  this.liste[nbListe].francais!='':
+    //     this.expression = this.liste[nbListe].francais;//setup question
+    //     this.answerUser.francais= this.liste[nbListe].francais;
+    //     this.answer= this.liste[nbListe]//setup answer
+    //     break;
+    //   case nbdanslaliste==1 && this.liste[nbListe].japonaisHira!='':
+    //     this.expression = this.liste[nbListe].japonaisHira;//setup question
+    //     this.answerUser.japonaisHira= this.liste[nbListe].japonaisHira;
+    //     this.answer= this.liste[nbListe]//setup answer
+    //     break; 
+    //   case nbdanslaliste==2 && this.liste[nbListe].japonaisKata!='':
+    //     this.expression = this.liste[nbListe].japonaisKata;//setup question
+    //     this.answerUser.japonaisKata= this.liste[nbListe].japonaisKata;
+    //     this.answer= this.liste[nbListe]//setup answer
+    //     break;
+    //   case nbdanslaliste==3 && this.liste[nbListe].kanji!='':
+    //     this.expression = this.liste[nbListe].kanji;//setup question
+    //     this.answerUser.kanji= this.liste[nbListe].kanji;
+    //     this.answer= this.liste[nbListe]//setup answer
 
-        break;
-    }
+    //     break;
+    // }
 
-    if(this.expression===''){
-      this.getQuestion()
-    }
-    console.log(this.answer, this.liste[nbListe], nbListe, nbdanslaliste, this.expression);    
 
   }
   

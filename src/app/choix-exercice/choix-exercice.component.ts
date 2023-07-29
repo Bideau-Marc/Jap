@@ -20,6 +20,8 @@ export class ChoixExerciceComponent implements OnInit {
   
 
   choixDeLexercice(){
+    console.log(this.exo);
+    
     localStorage.setItem("exo",this.exo)
     this.router.navigateByUrl('exercice')
   }

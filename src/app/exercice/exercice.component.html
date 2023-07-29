@@ -6,30 +6,30 @@
         <h1>traduisez l'expresion suivante : {{expression}} </h1>
         <div class="container">
             <form class="needs-validation">
-                <div class="form-group row" *ngIf="this.answer.japonaisHira!=='' && this.answer.japonaisHira!=expression">
+                <div class="form-group row" *ngIf="this.hira &&this.exo.caractere.japonaisHira!=''">
                     <label class="col"> Hiragana </label>
-                    <input  class="col form-control" id="validationServer01" id='hira' required type="text" [(ngModel)]="this.answerUser.japonaisHira" name="this.answer.japonaisHira" (keydown.enter)="verifier()">
+                    <input  class="col form-control" id="validationServer01" id='hira' required type="text" [(ngModel)]="this.exo.caractereReponse.japonaisHira" name="this.answer.japonaisHira" (keydown.enter)="verifier()">
                 </div>
-                <div  class="form-group row" *ngIf="this.answer.japonaisKata!=='' && this.answer.japonaisKata!=expression">
+                <div  class="form-group row" *ngIf="this.kata&&this.exo.caractere.japonaisKata!=''">
 
                     <label class="col"> Katakana </label>
-                    <input  class="col form-control" type="text" id='kata' [(ngModel)]="answerUser.japonaisKata"(keydown.enter)="verifier()" name="answerUser.japonaisKata">
+                    <input  class="col form-control" type="text" id='kata' [(ngModel)]="this.exo.caractereReponse.japonaisKata"(keydown.enter)="verifier()" name="answerUser.japonaisKata">
                 </div>
-                <div class="form-group row" *ngIf="this.answer.kanji!=='' && this.answer.kanji!=expression">
+                <div class="form-group row" *ngIf="this.kanji &&this.exo.caractere.kanji!=''">
 
                     <label class="col"> Kanji </label>
-                    <input  class="col form-control" type="text" id='kan' [(ngModel)]="answerUser.kanji"(keydown.enter)="verifier()" name="answerUser.kanji">
+                    <input  class="col form-control" type="text" id='kan' [(ngModel)]="this.exo.caractereReponse.kanji"(keydown.enter)="verifier()" name="answerUser.kanji">
                 </div>
-                <div class="form-group row" *ngIf="this.answer.francais!==''&& this.answer.francais!=expression">
+                <div class="form-group row" *ngIf="this.fr &&this.exo.caractere.francais!=''">
 
                     <label class="col"> Français </label>
-                    <input  class="col form-control" type="text" id='fra' [(ngModel)]="answerUser.francais"(keydown.enter)="verifier()" name="answerUser.francais">
+                    <input  class="col form-control" type="text" id='fra' [(ngModel)]="this.exo.caractereReponse.francais"(keydown.enter)="verifier()" name="answerUser.francais">
                 </div>
                 <br>
 
                 <p *ngIf="this.afficher">Dommage La réponse était: en hiragana : {{ answer.japonaisHira }}, en katakana :{{answer.japonaisKata}}, en kanji : {{answer.kanji}}, en francais : {{answer.francais}} </p>
                 <p *ngIf="this.correct">Félicitation La réponse est bien : en hiragana : {{ answer.japonaisHira }}, en katakana :{{answer.japonaisKata}}, en kanji : {{answer.kanji}}, en francais : {{answer.francais}}</p>
-                <button type="submit" class='btn btn-primary' (click)="verifier()"  *ngIf='!(this.correct||this.afficher)'>Vérifier la réponse</button>
+                <button  class='btn btn-primary' (click)="verifier()"  *ngIf='!(this.correct||this.afficher)'>Vérifier la réponse</button>
                 <button class='btn btn-primary' *ngIf='this.premier&&!this.afficher' (click)="display()">afficher la réponse</button>
                 <button class='btn btn-primary' *ngIf='this.correct||this.afficher' (click)="next()">passer à une question suivant</button>
             </form>

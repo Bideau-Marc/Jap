@@ -5,24 +5,28 @@ import { ChoixExerciceComponent } from './choix-exercice/choix-exercice.componen
 import { ControleComponent } from './controle/controle.component';
 import { ExerciceComponent } from './exercice/exercice.component';
 import { MainPageComponent } from './main-page/main-page.component';
-import { TestComponent } from './test/test.component';
+import { ControleOldComponent } from './controle-old/controle-old.component';
+import { AuthGuardService } from './module/auth/auth-guard.service';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {
-  path:"mainPage", component:MainPageComponent
+  path:"mainPage", component:ControleOldComponent, canActivate: [AuthGuardService]
+  },
+  { 
+    path: 'login', component: LoginComponent
   },
   {
-    path:"exercice", component:ExerciceComponent
+    path:"exercice", component:ExerciceComponent, canActivate: [AuthGuardService]
   },
   {
-    path:"controle", component:ControleComponent
+    path:"controle", component:ControleComponent, canActivate: [AuthGuardService]
   },
   {
-    path:"choix-exercice", component:ChoixExerciceComponent
+    path:"choix-exercice", component:ChoixExerciceComponent, canActivate: [AuthGuardService]
   },
-  {
-    path:"test", component:TestComponent
-  },
+  { path: '', redirectTo: '/login', pathMatch: 'full'},
+
 ];
 
 @NgModule({

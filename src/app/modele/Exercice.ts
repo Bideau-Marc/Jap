@@ -1,67 +1,47 @@
-import { Caractere } from "./caractere";
+import { Caractere } from '../modele/Caractere';
 
 export class Exercice{
     note:number =0;
     question: string='';
-    caractere: Caractere={
-      francais:'',
-      japonaisHira:'',
-      japonaisKata:'',
-      kanji:''
-    };
-    reponse:string='';
-    typeResponse:string='';
+    typeOfQuestion: string ='';
+    caractere!:Caractere;
+    caractereReponse!:Caractere;
+    reponse:{type:string; question:string}[]=[]
     constructor( caractere:Caractere){
-      this.caractere = caractere
-        let array = [caractere.francais,caractere.japonaisHira,caractere.japonaisKata,caractere.kanji]
-        let arraKey = ['francais',"hiragana","katakana","kanji"]
-        let randCara = Math.floor(Math.random() * 4)
+      this.caractereReponse = new Caractere('','','','');
+      this.caractere = caractere;
+        let array = [caractere.francais,caractere.japonaisHira,caractere.japonaisKata,caractere.kanji];
+        let arraKey = ['francais',"hiragana","katakana","kanji"];
+        let randCara = Math.floor(Math.random() * 4);
         while(array[randCara]===''){
-          randCara = Math.floor(Math.random() * 4)
+          randCara = Math.floor(Math.random() * 4);
         }
         this.question= array[randCara];
-        let randCaraAns = Math.floor(Math.random() * 4)
-        while(array[randCaraAns]==='' && randCara!=randCaraAns){
-          randCaraAns = Math.floor(Math.random() * 4)
+        this.typeOfQuestion = arraKey[randCara];
+        // let i=0;
+        // for(let index =0; index<arraKey.length; index++){
+        //     console.log('inside loop',index, randCara, index!=randCara);
+            
+        //     if(index!=randCara){
+        //         console.log("inside if");
+                
+        //         this.reponse[i]= {type:arraKey[i], question:array[i]};
+        //     }
+        //     i++;
+
+        // }
+        console.log(this.reponse, "here", randCara, this.question, this.reponse);
         }
-        this.reponse= array[randCaraAns];
-        this.typeResponse = arraKey[randCaraAns]
-        console.log(this.reponse);
-        
-    }
     
-    equals(answer: string){
-    //     let fr, kata,hira,kan;
-    // if(this.caractere.francais.toUpperCase()===cara.francais.toUpperCase()){
-    //   console.log("fr",this.caractere.francais,cara.francais,this.caractere.francais===cara.francais);
-    //     fr= true;
-    // }
-    // else{
-    //     fr=false;
-    // }
-    // if(this.caractere.japonaisHira===cara.japonaisHira){
-    //   hira=true;
-    //   console.log("hira",this.caractere.japonaisHira,cara.japonaisHira,this.caractere.japonaisHira===cara.japonaisHira);
-    // } 
-    // else hira=false;
-    // if(this.caractere.japonaisKata===cara.japonaisKata){
-    //   kata=true;
-    //   console.log("kata",this.caractere.japonaisKata,cara.japonaisKata,this.caractere.japonaisKata===cara.japonaisKata);
-      
-    // }
-    // else kata=false;
-    // if(this.caractere.kanji===cara.kanji){
-    //   kan=true;
-    //   console.log("kanji",this.caractere.kanji,cara.kanji,this.caractere.kanji===cara.kanji);
-    // }
-    // else kan = false;
-    // if(fr&&kata&&hira&&kan) this.note++;
-    // return [fr,kata,hira,kan];
-    console.log(answer, this.reponse, answer.toUpperCase()===this.reponse.toUpperCase());
-    
-      if(answer.toUpperCase()===this.reponse.toUpperCase()){
-        this.note++;
-      }
-  
-    }
+        equals(){
+          console.log(this.caractere, this.caractereReponse);
+          
+          this.caractereReponse.comparer(this.caractere)
+          console.log(this.caractere.comparer(this.caractereReponse));
+            if(this.caractereReponse.francaisCorrect&& this.caractereReponse.japonaisKataCorrect&& this.caractereReponse.kanjiCorrect && this.caractereReponse.japonaisHiraCorrect){
+              this.note++;
+            }
+            
+            
+        }
 }
