@@ -1,0 +1,23 @@
+# Utilise l'image Node.js comme base
+FROM node:14 AS build
+
+# Définir le répertoire de travail
+WORKDIR /app
+
+# Copier les fichiers package.json et package-lock.json pour installer les dépendances
+COPY package*.json ./
+
+# Installer les dépendances
+RUN npm install
+
+# Copier tout le contenu du projet
+COPY . .
+
+# Compiler le projet Angular
+RUN npm run build
+
+# Exposer le port (le port utilisé dans l'application Angular, probablement 4200)
+EXPOSE 4200
+
+# Commande pour démarrer l'application Angular
+CMD ["npm", "start"]

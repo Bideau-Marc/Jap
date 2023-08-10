@@ -1,4 +1,4 @@
-<div class="left">
+<!-- <div class="left">
     <span>{{score.scoreUser}}</span><span>/{{score.totalScore}}</span>
 </div>
 <div>
@@ -40,7 +40,7 @@
 </div>
 
 
-<!-- <div *ngIf='this.TypeExo[1]'>
+ <div *ngIf='this.TypeExo[1]'>
     <div class="centrer">
         <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
             <div class="example-box" *ngFor="let movie of this.listequestion" cdkDrag>
@@ -67,3 +67,28 @@
 
     </div>
 </div> -->
+
+<div class="score float-right">Note : {{ scoreService.score$ | async }} / {{ scoreService.attempts$ | async }}</div>
+
+
+<!-- Utilisation de ngSwitch pour afficher le bon type d'exercice -->
+<div [ngSwitch]="exerciseType">
+    <!-- Cas de l'exercice de traduction -->
+    <app-translation-exercice *ngSwitchCase="'translation'" [exercice]="exercice" [reponse]='reponse' [afficherSolution]="afficherSolution"></app-translation-exercice>
+    <!-- Cas de l'exercice de correspondance de mots -->
+    <!-- <app-matching-words-exercise *ngSwitchCase="'matching-words'"></app-matching-words-exercise> -->
+    <!-- Ajoutez d'autres cas pour les autres types d'exercices -->
+  </div>
+  <!-- Boutons -->
+<!-- Ajoutez les boutons ici -->
+<div class="text-center">
+    <!-- Bouton de vérification -->
+    <button *ngIf="verifierButtonVisible" (click)="verifierReponse()" class="btn btn-primary mr-2">Vérifier</button>
+  
+    <!-- Bouton pour afficher la solution -->
+    <button *ngIf="showSolutionButtonVisible " (click)="afficherSolution = true; showSolutionButtonVisible=false;  verifierButtonVisible=false; nextButtonVisible=true"
+      class="btn btn-secondary mr-2">Afficher la solution</button>
+  
+    <!-- Bouton pour passer à l'exercice suivant -->
+    <button *ngIf="nextButtonVisible" (click)="onNextExerciceClicked()" class="btn btn-success">Exercice suivant</button>
+  </div>

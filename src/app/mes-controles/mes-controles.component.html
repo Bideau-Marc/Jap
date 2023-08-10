@@ -1,0 +1,35 @@
+<div class="controles-container">
+    <div class="controle" *ngFor="let controle of controles">
+      <h3>Contrôle du : {{ controle.date | date:'dd/MM/yyyy' }}</h3>
+      <p>Note: {{ controle.note }}</p>
+      <p>Personne: {{ controle.personne!.login }}</p>
+      <ul>
+        <li *ngFor="let exerciceReponse of controle.exercicesReponses" class="exercice-reponse">
+          <p>Question: {{ exerciceReponse.exercice.question }}</p>
+          <!-- Affiche les réponses qui ne sont pas vides en vérifiant chaque type (francais, kanji, hiragana, katakana) -->
+          <p *ngIf="exerciceReponse.exercice.answers.francais !== ''">Votre réponse en francais: {{ exerciceReponse.reponse.francais }}</p>
+          <p *ngIf="exerciceReponse.exercice.answers.francais !== ''">Réponse en francais: {{ exerciceReponse.exercice.answers.francais }}</p>
+          <p *ngIf="exerciceReponse.exercice.answers.kanji !== ''">Votre réponse en kanji: {{ exerciceReponse.reponse.kanji }}</p>
+          <p *ngIf="exerciceReponse.exercice.answers.kanji !== ''">Réponse en kanji: {{ exerciceReponse.exercice.answers.kanji }}</p>
+          <p *ngIf="exerciceReponse.exercice.answers.hiragana !== ''">Votre réponse en hiragana: {{ exerciceReponse.reponse.hiragana }}</p>
+          <p *ngIf="exerciceReponse.exercice.answers.hiragana !== ''">Réponse en hiragana: {{ exerciceReponse.exercice.answers.hiragana }}</p>
+          <p *ngIf="exerciceReponse.exercice.answers.katakana !== ''">Votre réponse en katakana: {{ exerciceReponse.reponse.katakana }}</p>
+          <p *ngIf="exerciceReponse.exercice.answers.katakana !== ''">Réponse en katakana: {{ exerciceReponse.exercice.answers.katakana }}</p>
+  
+          <!-- Ici, tu peux ajouter des conditions pour afficher un message personnalisé en fonction de si la réponse est correcte ou non -->
+          <p *ngIf="exerciceReponse.reponse.francais === exerciceReponse.exercice.answers.francais; else mauvaiseReponse">
+            Bravo, bonne réponse !
+          </p>
+          <ng-template #mauvaiseReponse>
+            Dommage, mauvaise réponse. La réponse correcte était : {{ exerciceReponse.exercice.answers.francais }}
+          </ng-template>
+        </li>
+        <li class="exercice-reponse sans-puces">
+          <button (click)="refaireControle(controle)" class="btn btn-secondary">Refaire ce contrôle</button>
+        </li>
+      </ul>
+
+      
+    </div>
+  </div>
+  

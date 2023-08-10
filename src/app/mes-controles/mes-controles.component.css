@@ -1,0 +1,24 @@
+/* CSS pour afficher les contrôles en ligne */
+.controles-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .controle {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 23%; /* Ajuste la largeur pour afficher 4 contrôles par ligne */
+    margin-bottom: 20px;
+    margin-right: 10px; /* Ajout d'un espace à droite */
+    margin-left: 10px; /* Ajout d'un espace à gauche */
+  }
+  
+  .exercice-reponse {
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    margin-top: 10px;
+  }
+  .sans-puces{
+    list-style-type: none;
+  }  

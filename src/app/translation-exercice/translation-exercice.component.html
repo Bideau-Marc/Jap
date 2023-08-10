@@ -1,0 +1,77 @@
+<!-- Question -->
+<div class="question">
+  <h2 class="text-center">Traduisez le mot suivant : {{ exercice.question }}</h2>
+</div>
+
+<!-- Réponses -->
+<div class="answers">
+  <div class="row justify-content-center">
+    <!-- Français -->
+    <div *ngIf="exercice.answers.francais" class="col-12 col-md-6 mb-2">
+      <div class="form-group d-flex align-items-center">
+        <div class="col-4 col-md-2">
+          <label for="francais" class="mr-2">Français</label>
+        </div>
+        <div class="col-8 col-md-10">
+          <input type="text" id="francais" class="form-control" [(ngModel)]="reponse.francais"
+             />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <!-- Kanji -->
+    <div *ngIf="exercice.answers.kanji" class="col-12 col-md-6 mb-2">
+      <div class="form-group d-flex align-items-center">
+        <div class="col-4 col-md-2">
+          <label for="kanji" class="mr-2">Kanji</label>
+        </div>
+        <div class="col-8 col-md-10">
+          <input type="text" id="kanji" class="form-control" [(ngModel)]="reponse.kanji"
+             />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <!-- Hiragana -->
+    <div *ngIf="exercice.answers.hiragana" class="col-12 col-md-6 mb-2">
+      <div class="form-group d-flex align-items-center">
+        <div class="col-4 col-md-2">
+          <label for="hiragana" class="mr-2">Hiragana</label>
+        </div>
+        <div class="col-8 col-md-10">
+          <input type="text" id="hiragana" class="form-control" [(ngModel)]="reponse.hiragana"
+            />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <!-- Katakana -->
+    <div *ngIf="exercice.answers.katakana" class="col-12 col-md-6 mb-2">
+      <div class="form-group d-flex align-items-center">
+        <div class="col-4 col-md-2">
+          <label for="katakana" class="mr-2">Katakana</label>
+        </div>
+        <div class="col-8 col-md-10">
+          <input type="text" id="katakana" class="form-control" [(ngModel)]="reponse.katakana" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="this.resultat !== ''" class="mt-3">
+  {{ resultat }}
+</div>
+<!-- Affichage de la solution -->
+<div *ngIf="afficherSolution || isCorrect" class="mt-3">
+  <p *ngIf="exercice.answers.francais !== ''">Réponse en français: {{ exercice.answers.francais }}</p>
+  <p *ngIf="exercice.answers.kanji !== ''">Réponse en kanji: {{ exercice.answers.kanji }}</p>
+  <p *ngIf="exercice.answers.hiragana !== ''">Réponse en hiragana: {{ exercice.answers.hiragana }}</p>
+  <p *ngIf="exercice.answers.katakana !== ''">Réponse en katakana: {{ exercice.answers.katakana }}</p>
+</div>

@@ -2,17 +2,19 @@
 <ng-container *ngIf="authService.isAuthenticated()">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Menu</a>
+      <a class="navbar-brand">Menu</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-link active" aria-current="page"(click)="goToIndex()">Home</a>
           <a class="nav-link" (click)="goToAboutUs()">Exercice</a>
           <a class="nav-link" (click)="goToProducts()">Contrôle</a>
+          <a class="nav-link" (click)="goToMesControles()">Mes Contrôles</a>
         </div>
       </div>
+      <button class="btn btn-danger" (click)="logout()">Déconnexion</button>
+
     </div>
   </nav>
 </ng-container>

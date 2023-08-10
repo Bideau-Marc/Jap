@@ -2,12 +2,21 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { User } from 'src/app/modele/user';
+import { User } from 'src/app/modele/User';
 import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
-export class LoginService { 
+export class LoginService {
+  createUser(newUser: User) {
+    return this.http.post(this.endpoint+'/user', newUser)
+  }
+  getUserId(): number {
+    const id:number =  (JSON.parse(sessionStorage.getItem('userLogged')!).id)
+    console.log(id,"id");
+    
+    return id;
+  } 
   endpoint = environment.endpoint
   user!:User;
   constructor(private http: HttpClient, private router: Router,) {}
