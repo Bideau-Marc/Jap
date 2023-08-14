@@ -17,11 +17,11 @@
           <p *ngIf="exerciceReponse.exercice.answers.katakana !== ''">Réponse en katakana: {{ exerciceReponse.exercice.answers.katakana }}</p>
   
           <!-- Ici, tu peux ajouter des conditions pour afficher un message personnalisé en fonction de si la réponse est correcte ou non -->
-          <p *ngIf="exerciceReponse.reponse.francais === exerciceReponse.exercice.answers.francais; else mauvaiseReponse">
+          <p *ngIf="exerciceReponse.reponse.francais === exerciceReponse.exercice.answers.francais && exerciceReponse.reponse.kanji ===exerciceReponse.exercice.answers.kanji&& exerciceReponse.reponse.hiragana ===exerciceReponse.exercice.answers.hiragana && exerciceReponse.reponse.katakana ===exerciceReponse.exercice.answers.katakana; else mauvaiseReponse">
             Bravo, bonne réponse !
           </p>
           <ng-template #mauvaiseReponse>
-            Dommage, mauvaise réponse. La réponse correcte était : {{ exerciceReponse.exercice.answers.francais }}
+            Dommage, mauvaise réponse. 
           </ng-template>
         </li>
         <li class="exercice-reponse sans-puces">

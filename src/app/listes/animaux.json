@@ -1,0 +1,22 @@
+[
+    {"question": "chien", "ans": "いぬ"},
+    {"question": "chat", "ans": "ねこ"},
+    {"question": "oiseau", "ans": "とり"},
+    {"question": "poisson", "ans": "さかな"},
+    {"question": "tanuki", "ans": "たぬき"},
+    {"question": "lapin", "ans": "うさぎ"},
+    {"question": "vache", "ans": "うし"},
+    {"question": "mouton", "ans": "ひつじ"},
+    {"question": "chevre", "ans": "やぎ"},
+    {"question": "cochon", "ans": "ぶた"},
+    {"question": "cheval", "ans": "うま"},
+    {"question": "cerf", "ans": "しか"},
+    {"question": "souris", "ans": "しか"},
+    {"question": "dromadaire", "ans": "ﾛﾊﾞ"},
+    {"question": "ane", "ans": "しか"},
+    {"question": "poule", "ans": "にわとり"},
+    {"question": "ecureuil", "ans": "リス"},
+    {"question": "herisson", "ans": "ハリネズミ"},
+    {"question": "hamster", "ans": "ハムスター"},
+    {"question": "furet", "ans": "フェレット"}
+    ]
