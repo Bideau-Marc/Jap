@@ -11,12 +11,13 @@ import { ExerciseType } from 'src/app/modele/ExerciceType';
 import { ExerciceService } from '../exercice/exercice.service';
 import { Reponses } from 'src/app/modele/Reponse';
 import { LoginService } from '../login/login.service';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ControleService {
-  url: string = 'http://localhost:3000/controle'
+  url: string = environment.endpoint+'/controle'
 
   constructor(private http: HttpClient, private themeService: ThemeService, private caractereService: CaractereService, private exerciceService: ExerciceService, private userService: LoginService) { }
 

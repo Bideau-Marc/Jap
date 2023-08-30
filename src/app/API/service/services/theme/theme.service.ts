@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable, lastValueFrom, map } from 'rxjs'
 import { Theme } from 'src/app/modele/Theme';
+import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
@@ -23,7 +24,7 @@ export class ThemeService {
   }
 
   constructor(private http:HttpClient ,router: Router, ) { }
-  url:string='http://localhost:3000'
+  url:string=environment.endpoint
 
   public  getAllTheme():Observable<Theme[]>{    
     return this.http.get<Theme[]>(this.url+'/theme');

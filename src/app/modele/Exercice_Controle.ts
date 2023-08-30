@@ -1,4 +1,4 @@
-import { Caractere } from '../modele/Caractere';
+import { Caractere } from './Caractere';
 
 export class Exercice_Controle{
     note:number =0;
